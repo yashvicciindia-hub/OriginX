@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TraceIndia gives every product a verifiable digital identity.">
+    <title>TraceIndia | Product trust infrastructure</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.0.3/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <a href="#" class="logo-section" onclick="goHome(); return false;" aria-label="TraceIndia home"><span
+                    class="logo-icon"><img src="assets/TraceIndiaLogo.png" alt="TraceIndia"></span><span
+                    class="logo-text"><strong>TRACE<span>INDIA</span></strong><small>PRODUCT TRUST
+                        INFRASTRUCTURE</small></span></a>
+            <div class="header-search" id="headerSearch">
+                <div class="header-search-input-wrap"><svg class="header-search-icon" viewBox="0 0 24 24"
+                        aria-hidden="true">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <path d="m16.5 16.5 4 4"></path>
+                    </svg><input id="headerSearchInput" type="search" placeholder="Search a product or batch ID"
+                        autocomplete="off" aria-label="Search a product or batch ID"><button class="header-search-go"
+                        id="headerSearchGo" aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="m5 12h14m-6-6 6 6-6 6"></path>
+                        </svg></button></div>
+                <div class="header-search-panel" id="headerSearchPanel"></div>
+            </div>
+            <nav class="main-nav" aria-label="Primary navigation"><a onclick="goToSection('product')">Product</a><a
+                    onclick="goToSection('solutions')">Solutions</a><a
+                    onclick="goToSection('technology')">Technology</a><a
+                    onclick="goToSection('roadmap')">Roadmap</a><button class="btn btn-primary btn-small"
+                    onclick="goToVerify()">Verify a product</button></nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation"
+                aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu"><a onclick="goToSection('product')">Product</a><a
+                onclick="goToSection('solutions')">Solutions</a><a onclick="goToSection('technology')">Technology</a><a
+                onclick="goToSection('roadmap')">Roadmap</a><button class="btn btn-primary"
+                onclick="goToVerify()">Verify a product</button></div>
+    </header>
+    <main>
+        <div id="homeView" class="app-view active">
+            <section class="hero">
+                <div class="container hero-grid">
+                    <div class="hero-copy">
+                        <p class="eyebrow">India's product trust layer</p>
+                        <h1>India's First National Product Traceability Infrastructure</h1>
+                        <p class="hero-lede">TraceIndia gives every batch a secure digital identity, connecting source,
+                            process, compliance and proof in one scan.</p>
+                        <div class="cta-buttons"><button class="btn btn-primary" id="heroGetStarted">Verify a product
+                                <span>→</span></button><button class="btn btn-secondary" id="heroLearnMore">See how it
+                                works <span>↘</span></button></div>
+                        <div class="hero-note"><span class="status-dot"></span><span>Built for manufacturers, regulators
+                                and consumers</span></div>
+                    </div>
+                    <div class="hero-visual" aria-label="Digital product passport preview">
+                        <div class="trace-grid"></div>
+                        <div class="passport-card">
+                            <div class="passport-top"><span class="eyebrow">Digital passport</span><span
+                                    class="verified-badge">✓ Verified</span></div>
+                            <div class="passport-product">
+                                <div class="product-seal">TI</div>
+                                <div><strong>Basmati Rice</strong><small>Premium Grade 1121 · TIN-AGR-7734</small></div>
+                            </div>
+                            <div class="passport-line"><span>Origin</span><strong>Karnal, Haryana</strong></div>
+                            <div class="passport-line"><span>Record status</span><strong class="text-success">Immutable
+                                    match</strong></div>
+                            <div class="passport-qr">▦</div>
+                            <div class="scan-line"></div>
+                        </div>
+                        <div class="visual-label label-one">01 / Source registered</div>
+                        <div class="visual-label label-two">02 / Journey verified</div>
+                    </div>
+                </div>
+            </section>
+            <section class="trust-strip">
+                <div class="container trust-inner"><span class="trust-label">Designed around the standards that move
+                        Indian trade</span>
+                    <div class="standards"><span>FSSAI</span><span>APEDA</span><span>BIS</span><span>CDSCO</span></div>
+                </div>
+            </section>
+            <section class="problem-section" id="problem">
+                <div class="container split-section">
+                    <div>
+                        <p class="eyebrow">The visibility gap</p>
+                        <h2>Trust should travel with the product.</h2>
+                        <p class="lead">A label can tell you what a product is. A trace record tells you where it has
+                            been, who handled it and whether its claims hold up.</p>
+                        <div class="signal-list">
+                            <div><span>01</span><strong>Origin is hard to prove</strong>
+                                <p>Source data is scattered across paper records and disconnected systems.</p>
+                            </div>
+                            <div><span>02</span><strong>Counterfeit risk is invisible</strong>
+                                <p>Buyers need a reliable answer before a suspect product reaches the shelf.</p>
+                            </div>
+                            <div><span>03</span><strong>Compliance is reactive</strong>
+                                <p>Auditable evidence should be ready before an export or recall demands it.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="network-visual">
+                        <div class="network-node node-source">Source</div>
+                        <div class="network-node node-make">Make</div>
+                        <div class="network-node node-move">Move</div>
+                        <div class="network-node node-proof">Proof</div><svg viewBox="0 0 500 400" aria-hidden="true">
+                            <path d="M120 100 380 100 380 300 120 300Z"></path>
+                            <path d="M120 100 250 200 380 100M120 300l130-100 130 100"></path>
+                        </svg>
+                        <p>One shared record<br><strong>across every handoff</strong></p>
+                    </div>
+                </div>
+            </section>
+            <section class="features" id="features">
+                <div class="container">
+                    <div class="section-heading">
+                        <div>
+                            <p class="eyebrow">One scan, complete context</p>
+                            <h2>Evidence for every decision.</h2>
+                        </div>
+                        <p>Consumers gain instant, verified access to everything that matters — directly on their
+                            smartphone.</p>
+                    </div>
+                    <div class="features-grid">
+                        <article class="feature-card"><span class="line-icon">⌁</span>
+                            <h3>Origin and provenance</h3>
+                            <p>Product Origin &amp; Factory Details</p>
+                        </article>
+                        <article class="feature-card"><span class="line-icon">◫</span>
+                            <h3>Manufacturing journey</h3>
+                            <p>Ingredient Composition &amp; Timeline</p>
+                        </article>
+                        <article class="feature-card"><span class="line-icon">✓</span>
+                            <h3>Compliance evidence</h3>
+                            <p>Quality Certifications &amp; Authenticity</p>
+                        </article>
+                        <article class="feature-card"><span class="line-icon">#</span>
+                            <h3>Authenticity signals</h3>
+                            <p>Carbon Footprint &amp; Supply Chain History</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="industries" id="industries">
+                <div class="container">
+                    <div class="section-heading">
+                        <div>
+                            <p class="eyebrow">Solutions by industry</p>
+                            <h2>One trust layer.<br><em>Every supply chain.</em></h2>
+                        </div><button class="text-link" onclick="goToSection('solutions')">View all sectors →</button>
+                    </div>
+                    <div class="industries-grid">
+                        <article class="industry-card" onclick="goToIndustry('agriculture')">
+                            <div class="industry-icon-box">01</div>
+                            <h3>Agriculture &amp; Food</h3>
+                            <p>Farm-to-fork provenance, food safety and export readiness.</p>
+                        </article>
+                        <article class="industry-card" onclick="goToIndustry('pharma')">
+                            <div class="industry-icon-box">02</div>
+                            <h3>Pharmaceuticals</h3>
+                            <p>Batch accountability and anti-counterfeit controls.</p>
+                        </article>
+                        <article class="industry-card" onclick="goToIndustry('fmcg')">
+                            <div class="industry-icon-box">03</div>
+                            <h3>FMCG &amp; Cosmetics</h3>
+                            <p>Ingredient transparency and brand confidence at scale.</p>
+                        </article>
+                        <article class="industry-card" onclick="goToIndustry('textiles')">
+                            <div class="industry-icon-box">04</div>
+                            <h3>Textiles &amp; Luxury</h3>
+                            <p>Protect provenance, craft and ethical sourcing claims.</p>
+                        </article>
+                    </div>
+                    <p class="industry-footnote">Also serving: Electronics, Automobiles, Healthcare Products, and
+                        Industrial Manufacturing.</p>
+                </div>
+            </section>
+            <section class="how-it-works" id="how">
+                <div class="container">
+                    <p class="eyebrow">How it works</p>
+                    <h2>One QR code. Complete product transparency.</h2>
+                    <div class="process-steps">
+                        <div class="step"><span class="step-number">01</span>
+                            <h3>Assign Digital ID</h3>
+                            <p>Every product receives a unique digital identity linked to its lifecycle.</p>
+                        </div>
+                        <div class="step"><span class="step-number">02</span>
+                            <h3>Generate QR Link</h3>
+                            <p>Create an immutable digital record and QR code for the product.</p>
+                        </div>
+                        <div class="step"><span class="step-number">03</span>
+                            <h3>Consumer Scans</h3>
+                            <p>A single scan unlocks complete product transparency.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="technology" id="technology">
+                <div class="container architecture">
+                    <div>
+                        <p class="eyebrow">Infrastructure, not decoration</p>
+                        <h2>Technology Behind TraceIndia</h2>
+                        <p class="lead">A scalable trust infrastructure built on modular, enterprise-grade components
+                            designed for seamless integration across supply chains.</p>
+                    </div>
+                    <div class="stack-diagram tech-pillars">
+                        <div>
+                            <h3>Digital Product Passport Layer</h3>
+                            <p>Unified identity and data standards enabling interoperability across platforms and
+                                systems.</p>
+                        </div>
+                        <div>
+                            <h3>Blockchain Verification Layer</h3>
+                            <p>Immutable audit trails and tamper-proof records ensuring data integrity.</p>
+                        </div>
+                        <div>
+                            <h3>QR Traceability Engine</h3>
+                            <p>Batch-level digital identities with sub-second scanning and instant verification.</p>
+                        </div>
+                        <div>
+                            <h3>AI Analytics Engine</h3>
+                            <p>Pattern detection and anomaly identification for supply chain optimization.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-highlights">
+                    <div>
+                        <h3>Enterprise-Grade Security</h3>
+                        <p>End-to-end encryption, role-based access control, and compliance with data residency
+                            requirements.</p>
+                    </div>
+                    <div>
+                        <h3>Real-Time Processing</h3>
+                        <p>Sub-second latency for QR scans and instant verification across distributed networks.</p>
+                    </div>
+                    <div>
+                        <h3>Interoperability</h3>
+                        <p>Open API standards enabling integration with existing ERP, WMS, and logistics platforms.</p>
+                    </div>
+                    <div>
+                        <h3>Scalability</h3>
+                        <p>Designed to handle millions of daily transactions across India's supply chains.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="roadmap" id="roadmap">
+                <div class="container">
+                    <p class="eyebrow">The road ahead</p>
+                    <h2>TraceIndia is positioned to become the foundational layer of India's product trust
+                        infrastructure.</h2>
+                    <div class="timeline">
+                        <div class="phase-card current"><span>Phase 1</span>
+                            <h3>Pilot</h3>
+                            <p>Launch with anchor brands in Food &amp; Pharma; onboard 50+ manufacturers.</p>
+                        </div>
+                        <div class="phase-card"><span>Phase 2</span>
+                            <h3>Scale</h3>
+                            <p>Expand to FMCG, Textiles &amp; Cosmetics; integrate with export compliance systems.</p>
+                        </div>
+                        <div class="phase-card"><span>Phase 3</span>
+                            <h3>National</h3>
+                            <p>Full-sector rollout; API partnerships with government and logistics platforms.</p>
+                        </div>
+                        <div class="phase-card"><span>Phase 4</span>
+                            <h3>Global</h3>
+                            <p>Position TraceIndia as India's Digital Product Passport standard for international trade.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="contact" id="contact">
+                <div class="container contact-grid">
+                    <div>
+                        <p class="eyebrow">Start a conversation</p>
+                        <h2>Make your next batch easier to trust.</h2>
+                        <p class="lead">Tell us what you make, where it moves and what proof your customers need.</p>
+                        <p><a href="mailto:globalexpressgroup@gmail.com">globalexpressgroup@gmail.com</a><br><a
+                                href="tel:+919650560277">+91 96505 60277</a></p>
+                    </div>
+                    <div class="gform-panel">
+                        <h3>Schedule a demo</h3>
+                        <p>Share a few details and our onboarding team will follow up.</p>
+                        <a class="btn btn-primary"
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSdxUvm-FstZ9SJdiGN-Z6a61HpiChdycE1CfPOasw5G1bbgWg/viewform?usp=dialog"
+                            target="_blank" rel="noopener">Open demo request form ↗</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div id="traceView" class="app-view">
+            <div class="view-breadcrumb">
+                <div class="container"><a onclick="goHome()">Home</a><span>/</span><strong>Trace result</strong></div>
+            </div>
+            <div id="traceContent"></div>
+        </div>
+        <div id="industryView" class="app-view">
+            <div class="view-breadcrumb">
+                <div class="container"><a onclick="goHome()">Home</a><span>/</span><strong
+                        id="industryBreadcrumbName">Sector</strong></div>
+            </div>
+            <div id="industryContent"></div>
+        </div>
+        <div id="sectionView" class="app-view">
+            <div class="view-breadcrumb">
+                <div class="container"><a onclick="goHome()">Home</a><span>/</span><strong
+                        id="sectionBreadcrumbName">Page</strong></div>
+            </div>
+            <div id="sectionContent"></div>
+        </div>
+        <div id="verifyView" class="app-view">
+            <div class="view-breadcrumb">
+                <div class="container"><a onclick="goHome()">Home</a><span>/</span><strong>Verify a product</strong>
+                </div>
+            </div>
+            <div id="verifyContent"></div>
+        </div>
+        <div id="registerView" class="app-view">
+            <div class="view-breadcrumb">
+                <div class="container"><a onclick="goHome()">Home</a><span>/</span><strong>Register a product</strong>
+                </div>
+            </div>
+            <div id="registerContent"></div>
+        </div>
+    </main>
+    <div id="scannerModal" class="scanner-modal" hidden>
+        <div class="scanner-panel" role="dialog" aria-modal="true" aria-labelledby="scannerTitle"><button
+                class="modal-close" id="scannerClose" aria-label="Close scanner">×</button>
+            <h2 id="scannerTitle">Scan a TraceIndia QR</h2><video id="scannerVideo" autoplay muted
+                playsinline></video><canvas id="scannerCanvas" hidden></canvas>
+            <p id="scannerStatus">Point your camera at a TraceIndia QR code.</p><button class="btn btn-secondary"
+                id="uploadQrButton">Upload QR image</button><input id="qrFileInput" type="file" accept="image/*" hidden>
+        </div>
+    </div>
+    <div id="detailModal" class="scanner-modal" hidden>
+        <div class="scanner-panel" role="dialog" aria-modal="true"><button class="modal-close" id="detailClose"
+                aria-label="Close details">×</button>
+            <div id="detailContent"></div>
+        </div>
+    </div>
+    <footer>
+        <div class="container footer-grid">
+            <div><strong class="footer-brand">TRACE<span>INDIA</span></strong>
+                <p>India's product trust infrastructure.</p>
+            </div>
+            <div><strong>Explore</strong><a onclick="goToSection('product')">Product</a><a
+                    onclick="goToSection('solutions')">Solutions</a><a
+                    onclick="goToSection('technology')">Technology</a>
+            </div>
+            <div><strong>Contact</strong><a onclick="goToSection('contact')">Contact TraceIndia</a><a
+                    onclick="goToRegister()">Register a product</a></div>
+            <div><strong>For consumers</strong><a onclick="goToVerify()">Verify a product</a></div>
+        </div>
+        <div class="container footer-bottom"><span>© 2026 TraceIndia. Illustrative product concept.</span><span>Scan.
+                Trace. Trust.</span></div>
+    </footer>
+    <nav class="mobile-bottom-nav" aria-label="Mobile shortcuts"><a href="#"
+            data-mobile-action="home">⌂<span>Home</span></a><a href="#" data-mobile-action="verify"
+            class="primary">⌕<span>Verify</span></a><a href="#"
+            data-mobile-action="industries">◈<span>Sectors</span></a><a href="#"
+            data-mobile-action="contact">✉<span>Contact</span></a></nav>
+    <script src="script.js"></script>
+</body>
+
+</html>
