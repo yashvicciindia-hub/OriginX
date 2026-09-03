@@ -80,8 +80,8 @@ a {
 }
 
 .logo-icon {
-    width: 40px;
-    height: 40px;
+    width: 142px;
+    height: 48px;
     display: block
 }
 
@@ -89,6 +89,19 @@ a {
     width: 100%;
     height: 100%;
     object-fit: contain
+}
+
+.hero-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start
+}
+
+.footer-logo {
+    display: block;
+    width: 148px;
+    height: auto;
+    margin-bottom: 15px
 }
 
 .logo-text strong,
@@ -841,6 +854,18 @@ a:focus-visible {
     border: 1px solid #536173;
     padding: 20px;
     background: var(--ink-soft)
+}
+
+@media (max-width: 600px) {
+    .technology .tech-highlights {
+        grid-template-columns: 1fr
+    }
+}
+
+@media (max-width: 600px) {
+    .tech-highlights {
+        grid-template-columns: 1fr
+    }
 }
 
 /* Routed industry, search, and empty-state surfaces */
@@ -2269,7 +2294,8 @@ footer {
 
     .header-content {
         min-height: 66px;
-        gap: 12px
+        gap: 12px;
+        flex-wrap: wrap
     }
 
     .header-search {

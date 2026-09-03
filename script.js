@@ -1,6 +1,6 @@
 
 // ===================================================================
-// TraceIndia — Application Data & Logic
+// OriginX — Application Data & Logic
 // Single-file client-side router: home / trace-result / industry-detail / section-detail
 // ===================================================================
 
@@ -276,7 +276,7 @@ const SECTION_PAGES = {
 };
 
 const CONTENT_PAGES = {
-    product: { intro: "A clear path from physical product to trusted proof.", body: "TraceIndia connects a product's identity, journey and evidence in one interoperable record. Manufacturers create the record at source; every later event adds context without losing the audit trail.", blocks: ["Assign a digital identity at manufacture.", "Attach a QR code to the physical batch.", "Record custody, checks and certifications.", "Let anyone verify the right information instantly."], action: "Register a product" },
+    product: { intro: "A clear path from physical product to trusted proof.", body: "OriginX connects a product's identity, journey and evidence in one interoperable record. Manufacturers create the record at source; every later event adds context without losing the audit trail.", blocks: ["Assign a digital identity at manufacture.", "Attach a QR code to the physical batch.", "Record custody, checks and certifications.", "Let anyone verify the right information instantly."], action: "Register a product" },
     solutions: { intro: "Purpose-built traceability for the way each sector works.", body: "Start with the workflows you already have, then add the proof your customers and regulators need. Each sector model uses the same trusted identity layer and its own compliance vocabulary.", blocks: Object.values(INDUSTRIES).map(ind => ind.name), action: "Explore agriculture" },
 };
 
@@ -296,11 +296,11 @@ function renderSectionView(sectionId) {
     if (!sourceEl) {
         const page = CONTENT_PAGES[sectionId];
         if (!page) {
-            document.getElementById('sectionContent').innerHTML = '<section class="content-page"><div class="container"><p class="eyebrow">404</p><h1>That page is not on the ledger.</h1><p>Check the address or return to the TraceIndia home page.</p><button class="btn btn-primary" onclick="goHome()">Return home</button></div></section>';
+            document.getElementById('sectionContent').innerHTML = '<section class="content-page"><div class="container"><p class="eyebrow">404</p><h1>That page is not on the ledger.</h1><p>Check the address or return to the OriginX home page.</p><button class="btn btn-primary" onclick="goHome()">Return home</button></div></section>';
             return;
         }
         const pageAction = sectionId === 'product' ? 'goToRegister()' : sectionId === 'solutions' ? "goToIndustry('agriculture')" : "goToSection('contact')";
-        document.getElementById('sectionContent').innerHTML = `<section class="content-page"><div class="container content-page-inner"><p class="eyebrow">TraceIndia platform</p><h1>${escapeHtml(sec.title)}</h1><p class="content-intro">${escapeHtml(page.intro)}</p><p class="lead">${escapeHtml(page.body)}</p><div class="content-blocks">${page.blocks.map((block, index) => `<article><span>0${index + 1}</span><h3>${escapeHtml(block)}</h3></article>`).join('')}</div><button class="btn btn-primary" onclick="${pageAction}">${escapeHtml(page.action)}</button></div></section>`;
+        document.getElementById('sectionContent').innerHTML = `<section class="content-page"><div class="container content-page-inner"><p class="eyebrow">OriginX platform</p><h1>${escapeHtml(sec.title)}</h1><p class="content-intro">${escapeHtml(page.intro)}</p><p class="lead">${escapeHtml(page.body)}</p><div class="content-blocks">${page.blocks.map((block, index) => `<article><span>0${index + 1}</span><h3>${escapeHtml(block)}</h3></article>`).join('')}</div><button class="btn btn-primary" onclick="${pageAction}">${escapeHtml(page.action)}</button></div></section>`;
         return;
     }
     // Clone the homepage section's full markup (including its own
@@ -386,7 +386,7 @@ function renderRegisterView() {
     document.getElementById('registerContent').innerHTML = `
         <section class="register-view"><div class="container"><div class="register-panel">
             <span class="trace-status-pill"><span class="dot"></span> Manufacturer onboarding</span>
-            <h1>Register a product</h1><p>Tell us about a product you want to bring onto TraceIndia.</p>
+            <h1>Register a product</h1><p>Tell us about a product you want to bring onto OriginX.</p>
             <!-- Google Form #1: Manufacturer Onboarding -->
             <!-- Replace YOUR_ONBOARDING_FORM_ID with your real Google Form's embed ID -->
             <div class="gform-panel">
@@ -511,7 +511,7 @@ function renderVerifiedProductCard(container, batchId, product) {
 
                         <div class="trace-sidebar-card" style="text-align:center;">
                             <h3 style="justify-content:center;">Explore ${escapeHtml(industry.name)}</h3>
-                            <p style="font-size:13px; color:#8a93a3; margin-bottom:16px; line-height:1.6;">See how TraceIndia secures this entire sector, end to end.</p>
+                            <p style="font-size:13px; color:#8a93a3; margin-bottom:16px; line-height:1.6;">See how OriginX secures this entire sector, end to end.</p>
                             <button class="btn btn-primary" style="width:100%; padding:13px;" onclick="goToIndustry('${product.industry}')">View Sector Details</button>
                         </div>
 
@@ -535,7 +535,7 @@ function renderNotFoundCard(container, batchId) {
                 <div class="trace-notfound">
                     <div class="icon">?</div>
                     <h3>No record found for "${escapeHtml(batchId)}"</h3>
-                    <p>We couldn't match this to a registered TraceIndia product. Double-check the code on your QR label, or try one of these live sample traces below.</p>
+                    <p>We couldn't match this to a registered OriginX product. Double-check the code on your QR label, or try one of these live sample traces below.</p>
                     <div class="sample-label">Try a Sample Batch ID</div>
                     <div class="sample-id-grid">
                         ${allIds.map(id => `<button onclick="goToTrace('${id}')">${id}</button>`).join('')}
@@ -562,7 +562,7 @@ function closeQrScanner() {
 function handleQrValue(value) {
     const match = String(value).match(/#(?:\/?trace)\/([^/?#]+)/i);
     if (!match) {
-        document.getElementById('scannerStatus').textContent = 'That QR is not a TraceIndia product link.';
+        document.getElementById('scannerStatus').textContent = 'That QR is not an OriginX product link.';
         return;
     }
     closeQrScanner();
@@ -583,7 +583,7 @@ async function startQrScanner() {
         scannerStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' }, audio: false });
         video.srcObject = scannerStream;
         await video.play();
-        status.textContent = 'Point your camera at a TraceIndia QR code.';
+        status.textContent = 'Point your camera at an OriginX QR code.';
         const canvas = document.getElementById('scannerCanvas');
         const context = canvas.getContext('2d', { willReadFrequently: true });
         const scanFrame = () => {
@@ -630,7 +630,7 @@ function showDetail(title, body) {
 
 async function shareProduct(batchId) {
     const url = buildTraceUrl(batchId);
-    if (navigator.share) await navigator.share({ title: 'TraceIndia Product Passport', text: `Verify ${batchId}`, url });
+    if (navigator.share) await navigator.share({ title: 'OriginX Product Passport', text: `Verify ${batchId}`, url });
     else {
         await navigator.clipboard.writeText(url);
         alert('Product link copied.');
@@ -642,7 +642,7 @@ function downloadPassport(batchId) {
     if (!product || !window.jspdf) return;
     const { jsPDF } = window.jspdf;
     const pdf = new jsPDF();
-    pdf.setFontSize(20); pdf.text('TraceIndia Digital Passport', 20, 24);
+    pdf.setFontSize(20); pdf.text('OriginX Digital Passport', 20, 24);
     pdf.setFontSize(12); pdf.text(`Product: ${product.name}`, 20, 38); pdf.text(`Batch: ${batchId}`, 20, 46);
     pdf.text(`Origin: ${product.originLocation}`, 20, 54); pdf.text('Certifications:', 20, 68);
     product.certifications.forEach((cert, i) => pdf.text(`- ${cert}`, 26, 76 + i * 7));

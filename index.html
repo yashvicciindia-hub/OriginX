@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TraceIndia gives every product a verifiable digital identity.">
-    <title>TraceIndia | Product trust infrastructure</title>
+    <meta name="description" content="OriginX gives every product a verifiable digital identity.">
+    <title>OriginX | Product trust infrastructure</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.0.3/qrcode.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
@@ -15,10 +15,8 @@
 <body>
     <header class="site-header">
         <div class="container header-content">
-            <a href="#" class="logo-section" onclick="goHome(); return false;" aria-label="TraceIndia home"><span
-                    class="logo-icon"><img src="assets/TraceIndiaLogo.png" alt="TraceIndia"></span><span
-                    class="logo-text"><strong>TRACE<span>INDIA</span></strong><small>PRODUCT TRUST
-                        INFRASTRUCTURE</small></span></a>
+                <a href="#" class="logo-section" onclick="goHome(); return false;" aria-label="OriginX home"><span
+                    class="logo-icon"><img src="assets/logo.png" alt="OriginX"></span></a>
             <div class="header-search" id="headerSearch">
                 <div class="header-search-input-wrap"><svg class="header-search-icon" viewBox="0 0 24 24"
                         aria-hidden="true">
@@ -51,13 +49,13 @@
                     <div class="hero-copy">
                         <p class="eyebrow">India's product trust layer</p>
                         <h1>India's First National Product Traceability Infrastructure</h1>
-                        <p class="hero-lede">TraceIndia gives every batch a secure digital identity, connecting source,
+                        <p class="hero-lede">OriginX gives every batch a secure digital identity, connecting source,
                             process, compliance and proof in one scan.</p>
                         <div class="cta-buttons"><button class="btn btn-primary" id="heroGetStarted">Verify a product
                                 <span>→</span></button><button class="btn btn-secondary" id="heroLearnMore">See how it
                                 works <span>↘</span></button></div>
-                        <div class="hero-note"><span class="status-dot"></span><span>Built for manufacturers, regulators
-                                and consumers</span></div>
+                        <!-- <div class="hero-note"><span class="status-dot"></span><span>Built for manufacturers, regulators
+                                and consumers</span></div> -->
                     </div>
                     <div class="hero-visual" aria-label="Digital product passport preview">
                         <div class="trace-grid"></div>
@@ -80,11 +78,28 @@
                 </div>
             </section>
             <section class="trust-strip">
-                <div class="container trust-inner"><span class="trust-label">Designed around the standards that move
-                        Indian trade</span>
-                    <div class="standards"><span>FSSAI</span><span>APEDA</span><span>BIS</span><span>CDSCO</span></div>
-                </div>
-            </section>
+    <div class="container trust-inner">
+
+        <div class="trust-copy">
+            <div class="hero-note">
+                <span class="status-dot"></span>
+                <span>Built for manufacturers, regulators and consumers</span>
+            </div>
+
+            <span class="trust-label">
+                Designed around the standards that move Indian trade
+            </span>
+        </div>
+
+        <div class="standards">
+            <span>FSSAI</span>
+            <span>APEDA</span>
+            <span>BIS</span>
+            <span>CDSCO</span>
+        </div>
+
+    </div>
+</section>
             <section class="problem-section" id="problem">
                 <div class="container split-section">
                     <div>
@@ -204,7 +219,7 @@
                 <div class="container architecture">
                     <div>
                         <p class="eyebrow">Infrastructure, not decoration</p>
-                        <h2>Technology Behind TraceIndia</h2>
+                        <h2>Technology Behind OriginX</h2>
                         <p class="lead">A scalable trust infrastructure built on modular, enterprise-grade components
                             designed for seamless integration across supply chains.</p>
                     </div>
@@ -251,7 +266,7 @@
             <section class="roadmap" id="roadmap">
                 <div class="container">
                     <p class="eyebrow">The road ahead</p>
-                    <h2>TraceIndia is positioned to become the foundational layer of India's product trust
+                    <h2>OriginX is positioned to become the foundational layer of India's product trust
                         infrastructure.</h2>
                     <div class="timeline">
                         <div class="phase-card current"><span>Phase 1</span>
@@ -268,7 +283,7 @@
                         </div>
                         <div class="phase-card"><span>Phase 4</span>
                             <h3>Global</h3>
-                            <p>Position TraceIndia as India's Digital Product Passport standard for international trade.
+                            <p>Position OriginX as India's Digital Product Passport standard for international trade.
                             </p>
                         </div>
                     </div>
@@ -331,9 +346,9 @@
     <div id="scannerModal" class="scanner-modal" hidden>
         <div class="scanner-panel" role="dialog" aria-modal="true" aria-labelledby="scannerTitle"><button
                 class="modal-close" id="scannerClose" aria-label="Close scanner">×</button>
-            <h2 id="scannerTitle">Scan a TraceIndia QR</h2><video id="scannerVideo" autoplay muted
+            <h2 id="scannerTitle">Scan an OriginX QR</h2><video id="scannerVideo" autoplay muted
                 playsinline></video><canvas id="scannerCanvas" hidden></canvas>
-            <p id="scannerStatus">Point your camera at a TraceIndia QR code.</p><button class="btn btn-secondary"
+            <p id="scannerStatus">Point your camera at an OriginX QR code.</p><button class="btn btn-secondary"
                 id="uploadQrButton">Upload QR image</button><input id="qrFileInput" type="file" accept="image/*" hidden>
         </div>
     </div>
@@ -345,18 +360,18 @@
     </div>
     <footer>
         <div class="container footer-grid">
-            <div><strong class="footer-brand">TRACE<span>INDIA</span></strong>
+            <div><img class="footer-logo" src="assets/logo.png" alt="OriginX">
                 <p>India's product trust infrastructure.</p>
             </div>
             <div><strong>Explore</strong><a onclick="goToSection('product')">Product</a><a
                     onclick="goToSection('solutions')">Solutions</a><a
                     onclick="goToSection('technology')">Technology</a>
             </div>
-            <div><strong>Contact</strong><a onclick="goToSection('contact')">Contact TraceIndia</a><a
+            <div><strong>Contact</strong><a onclick="goToSection('contact')">Contact OriginX</a><a
                     onclick="goToRegister()">Register a product</a></div>
             <div><strong>For consumers</strong><a onclick="goToVerify()">Verify a product</a></div>
         </div>
-        <div class="container footer-bottom"><span>© 2026 TraceIndia. Illustrative product concept.</span><span>Scan.
+        <div class="container footer-bottom"><span>© 2026 OriginX. Illustrative product concept.</span><span>Scan.
                 Trace. Trust.</span></div>
     </footer>
     <nav class="mobile-bottom-nav" aria-label="Mobile shortcuts"><a href="#"
