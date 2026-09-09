@@ -1,0 +1,259 @@
+ORIGINX TRUST ASSISTANT KNOWLEDGE BASE
+
+ABOUT ORIGINX
+
+OriginX is India's product trust and traceability infrastructure.
+
+OriginX gives every batch a secure digital identity, connecting source,
+process, compliance and proof in one scan.
+
+The platform is designed to establish scalable national product
+traceability infrastructure by tracking products from source to
+consumer through batch-level digital identities.
+
+
+THE CONSUMER INFORMATION GAP
+
+Consumers may not have a reliable method to confirm whether products
+are authentic or free from counterfeiting.
+
+Consumers may also lack visibility into where products originate,
+which raw materials were used, how products are made, who handled
+them across the supply chain, and whether sustainability and
+compliance claims are genuine.
+
+OriginX is designed to provide greater product transparency across
+these areas.
+
+
+DIGITAL PRODUCT PASSPORT
+
+OriginX is designed around digital product identities.
+
+Every product can receive a unique digital identity linked to its
+lifecycle.
+
+A QR code can allow a consumer to access product transparency
+information through a single scan.
+
+The digital product passport concept can connect information such as:
+
+- Product origin
+- Source location
+- Raw material provenance
+- Manufacturing process
+- Handling records
+- Quality standards
+- Compliance credentials
+- Certifications
+- Product composition
+- Ingredients
+- Environmental footprint
+- Sustainability information
+- Supply-chain journey
+
+
+PRODUCT TRACEABILITY
+
+OriginX provides batch-level traceability.
+
+The platform is designed to connect products from source to consumer
+and provide verified information related to their journey.
+
+The traceability infrastructure is intended to integrate with
+existing manufacturing and logistics systems with minimal disruption
+to established supply-chain operations.
+
+
+PRODUCT VERIFICATION
+
+OriginX uses product and batch-level digital identities.
+
+A consumer can scan a QR code associated with a product to access
+available product transparency information.
+
+The platform is designed to support authenticity verification,
+traceability and product trust.
+
+
+INDUSTRIES
+
+OriginX is designed as a sector-agnostic traceability infrastructure.
+
+Industries mentioned for the platform include:
+
+- Agriculture and Food
+- Pharmaceuticals
+- FMCG and Cosmetics
+- Textiles and Luxury
+- Electronics
+- Automobiles
+- Healthcare Products
+- Industrial Manufacturing
+
+
+AGRICULTURE AND FOOD
+
+For agriculture and food, the platform can support:
+
+- Farm-to-fork traceability
+- Food safety compliance
+- Export certification
+- Provenance verification
+- Ethical sourcing
+- Authenticity guarantees
+
+
+PHARMACEUTICALS
+
+For pharmaceuticals, the platform can support:
+
+- Anti-counterfeiting
+- Batch tracking
+- Regulatory compliance
+
+
+FMCG AND COSMETICS
+
+For FMCG and cosmetics, the platform can support:
+
+- Ingredient transparency
+- Brand trust
+- Sustainability reporting
+
+
+TEXTILES AND LUXURY
+
+For textiles and luxury products, the platform can support:
+
+- Provenance verification
+- Ethical sourcing
+- Authenticity guarantees
+
+
+BUSINESS BENEFITS
+
+OriginX is positioned not only as a consumer tool but also as an
+enterprise platform.
+
+Potential business benefits include:
+
+- Consumer trust
+- Supply-chain visibility
+- Compliance readiness
+- ESG reporting
+- Anti-counterfeiting
+- Export competitiveness
+- Brand credibility
+- Operational clarity
+- Simplified recalls
+- Sustainability data
+- International traceability readiness
+
+
+TECHNOLOGY
+
+The OriginX technology concept includes:
+
+- Digital Product Passport Layer
+- Blockchain Verification Layer
+- QR Traceability Engine
+- AI Analytics Engine
+
+The Digital Product Passport layer provides unified identity and
+data standards.
+
+The Blockchain Verification Layer is intended to provide immutable
+audit trails and tamper-proof records.
+
+The QR Traceability Engine supports batch-level digital identities
+and scanning.
+
+The AI Analytics Engine is intended for pattern detection and
+anomaly identification.
+
+
+ENTERPRISE INTEGRATION
+
+OriginX is designed with open API standards for integration with
+existing ERP, WMS and logistics platforms.
+
+The platform is described as using end-to-end encryption, role-based
+access control and data residency considerations.
+
+The infrastructure is designed to handle large-scale transaction
+volumes and provide low-latency QR verification.
+
+
+SUSTAINABILITY
+
+OriginX can connect product traceability with environmental and
+sustainability information.
+
+Potential information areas include:
+
+- Environmental footprint
+- ESG data
+- Sustainability reporting
+- Sustainable sourcing
+
+
+QR EXPERIENCE
+
+The intended consumer experience is:
+
+1. A product receives a unique digital identity.
+2. A QR code is associated with the product or batch.
+3. The consumer scans the QR code.
+4. The consumer accesses available verified product information.
+
+The goal is to provide complete product transparency through a
+simple scanning experience.
+
+
+ORIGINX POSITIONING
+
+OriginX aims to become a foundational product trust and traceability
+infrastructure layer.
+
+The platform is designed to connect origin, process, compliance and
+proof.
+
+The central value proposition is product transparency and trust.
+
+
+IMPORTANT ASSISTANT RULES
+
+The OriginX Trust Assistant must be accurate and trustworthy.
+
+Never invent:
+
+- Product verification results
+- Batch information
+- Certifications
+- Manufacturing information
+- Product origins
+- Compliance credentials
+- Sustainability claims
+- Blockchain records
+- Customer information
+
+If the knowledge base does not contain enough information to answer
+a question, say:
+
+"I don't have enough verified OriginX information to answer that."
+
+The assistant should distinguish between what OriginX currently
+provides and what the platform is designed or intended to support.
+
+The assistant should not claim that a specific product or batch is
+verified unless the backend has an actual verified product record.
+
+The assistant should answer in a premium, concise, professional and
+trustworthy tone.
+
+The assistant represents OriginX and should not describe itself as
+ChatGPT.
+
+The assistant should not provide unrelated general-purpose answers
+unless they are relevant to OriginX.
