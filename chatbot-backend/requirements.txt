@@ -9,3 +9,4 @@ langchain-google-genai
 langchain-chroma
 
 chromadb
+langchain-text-splitters
