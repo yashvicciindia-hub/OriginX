@@ -3,7 +3,7 @@
    Premium Frontend Chatbot
    ========================================================= */
 
-const ORIGINX_API_URL = "https://originx-ti4t.onrender.com/";
+const ORIGINX_API_URL = "https://originx-ti4t.onrender.com";
 
 
 /* =========================================================
