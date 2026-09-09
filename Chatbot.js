@@ -3,7 +3,7 @@
    Premium Frontend Chatbot
    ========================================================= */
 
-const ORIGINX_API_URL = "http://127.0.0.1:8000";
+const ORIGINX_API_URL = "https://originx-ti4t.onrender.com/";
 
 
 /* =========================================================
@@ -21,7 +21,7 @@ const ORIGINX_API_URL = "http://127.0.0.1:8000";
     const link = document.createElement("link");
 
     link.rel = "stylesheet";
-    link.href = "chatbot/chatbot.css";
+    link.href = "Chatbot.css";
 
     link.dataset.originxChatbotStyle = "true";
 
