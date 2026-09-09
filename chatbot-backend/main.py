@@ -32,7 +32,7 @@ app.add_middleware(
         "http://127.0.0.1:3000",
 
         # Your deployed OriginX website
-        "https://origin-x-tawny.vercel.app"
+        "https://origin-x-c56f.vercel.app/"
     ],
 
     allow_credentials=True,
