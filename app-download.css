@@ -1,0 +1,300 @@
+/* ==========================================================
+   ORIGINX APP DOWNLOAD CTAs
+   Isolated styles — no conflicts with existing site CSS.
+   Two components:
+     1. .originx-navbar-app        — Navbar "Download App" button
+     2. .originx-floating-app      — Floating right-side CTA
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   SHARED ICON SIZING (used in both CTAs)
+   ---------------------------------------------------------- */
+
+.originx-navbar-app__icon {
+    width: 15px;
+    height: 15px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+/* ==========================================================
+   1. NAVBAR DOWNLOAD APP BUTTON
+   ========================================================== */
+
+.originx-navbar-app {
+    /* Inherit base .btn and .btn-primary from site's CSS.
+       Here we add a distinct visual edge to make it stand out
+       slightly while remaining consistent with the design system. */
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    border: 1.5px solid #0e7c4a;
+    background: #0e7c4a;
+    color: #fff !important;
+
+    border-radius: 6px;
+    padding: 9px 14px;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+
+    box-shadow:
+        0 4px 14px rgba(14, 124, 74, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.10);
+
+    transition:
+        background 0.22s ease,
+        border-color 0.22s ease,
+        box-shadow 0.22s ease,
+        transform 0.22s ease;
+
+    cursor: pointer;
+}
+
+.originx-navbar-app:hover {
+    background: #09653c;
+    border-color: #09653c;
+    color: #fff !important;
+    box-shadow:
+        0 7px 20px rgba(14, 124, 74, 0.30),
+        inset 0 1px 0 rgba(255, 255, 255, 0.10);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.originx-navbar-app:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(14, 124, 74, 0.18);
+}
+
+.originx-navbar-app:focus-visible {
+    outline: 3px solid rgba(14, 124, 74, 0.40);
+    outline-offset: 3px;
+}
+
+
+/* ==========================================================
+   2. MOBILE MENU DOWNLOAD APP BUTTON
+   (inside .mobile-menu, shown at ≤600px)
+   ========================================================== */
+
+.originx-mobile-app-download {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    width: 100%;
+    padding: 13px 18px;
+
+    background: #0e7c4a;
+    color: #fff;
+    border: 1.5px solid #0e7c4a;
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+
+    box-shadow: 0 4px 14px rgba(14, 124, 74, 0.22);
+
+    transition:
+        background 0.22s ease,
+        box-shadow 0.22s ease,
+        transform 0.22s ease;
+}
+
+.originx-mobile-app-download:hover {
+    background: #09653c;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(14, 124, 74, 0.30);
+    color: #fff;
+}
+
+.originx-mobile-app-download:active {
+    transform: translateY(0);
+}
+
+.originx-mobile-app-download:focus-visible {
+    outline: 3px solid rgba(14, 124, 74, 0.40);
+    outline-offset: 3px;
+}
+
+.originx-mobile-app-download .originx-navbar-app__icon {
+    width: 17px;
+    height: 17px;
+}
+
+
+/* ==========================================================
+   3. FLOATING RIGHT-SIDE DOWNLOAD CTA
+   Positioned above the existing chatbot button.
+   Chatbot: right 28px, bottom 28px, height 62px.
+   Floating CTA bottom = 28 + 62 + 16 (gap) = 106px
+   ========================================================== */
+
+.originx-floating-app {
+    /* Layout & positioning */
+    position: fixed;
+    right: 28px;
+    bottom: 106px;
+    z-index: 1000; /* above header (100), below chatbot (99999) */
+
+    /* Default compact state — icon button */
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0;
+    overflow: hidden;
+
+    /* Size: compact icon pill */
+    height: 52px;
+    width: 52px;
+
+    /* Visual style — consistent with OriginX brand */
+    background: #0b1220;           /* --ink (navy dark) */
+    color: #fff;
+    border-radius: 14px;
+    border: none;
+    text-decoration: none;
+
+    box-shadow:
+        0 12px 35px rgba(11, 18, 32, 0.28),
+        0 0 0 1px rgba(255, 255, 255, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+    /* Smooth expand transition */
+    transition:
+        width 0.26s cubic-bezier(0.34, 1.30, 0.64, 1),
+        background 0.22s ease,
+        box-shadow 0.22s ease,
+        transform 0.22s ease;
+
+    cursor: pointer;
+}
+
+/* Icon (always visible) */
+.originx-floating-app__icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    flex-shrink: 0;
+    margin: 0 14px 0 14px;
+    transition: margin 0.26s ease;
+}
+
+/* Label (hidden by default, revealed on hover) */
+.originx-floating-app__label {
+    white-space: nowrap;
+    font-size: 13px;
+    font-weight: 800;
+    font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+    letter-spacing: 0.01em;
+    overflow: hidden;
+    max-width: 0;
+    opacity: 0;
+    transition:
+        max-width 0.26s cubic-bezier(0.34, 1.30, 0.64, 1),
+        opacity 0.18s ease,
+        margin 0.26s ease;
+    margin-right: 0;
+}
+
+/* Hover: expand pill to the left, reveal label */
+.originx-floating-app:hover {
+    width: 168px;
+    background: #0e7c4a;
+    box-shadow:
+        0 16px 45px rgba(14, 124, 74, 0.30),
+        0 0 0 1px rgba(34, 197, 94, 0.28);
+    transform: translateY(-2px);
+}
+
+.originx-floating-app:hover .originx-floating-app__icon {
+    margin-left: 14px;
+    margin-right: 10px;
+}
+
+.originx-floating-app:hover .originx-floating-app__label {
+    max-width: 130px;
+    opacity: 1;
+    margin-right: 16px;
+}
+
+.originx-floating-app:active {
+    transform: translateY(0);
+    box-shadow:
+        0 8px 22px rgba(14, 124, 74, 0.22),
+        0 0 0 1px rgba(34, 197, 94, 0.20);
+}
+
+.originx-floating-app:focus-visible {
+    outline: 3px solid rgba(14, 124, 74, 0.45);
+    outline-offset: 4px;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+/* At 900px: navbar links are hidden, navbar-app button stays
+   as part of .main-nav which is still visible.
+   btn-small becomes compact. No extra rules needed here. */
+
+/* At 600px breakpoint: mobile layout */
+@media (max-width: 600px) {
+
+    /* Navbar app button: already hidden because .main-nav
+       hides at 600px. The mobile-menu version covers it. */
+    .originx-navbar-app {
+        display: none;
+    }
+
+    /* Floating CTA: adjust for mobile chatbot position.
+       Mobile chatbot: right 18px, bottom 18px, height 58px.
+       Gap = 14px → bottom = 18 + 58 + 14 = 90px            */
+    .originx-floating-app {
+        right: 18px;
+        bottom: 90px;
+
+        /* Compact on mobile — slightly smaller touch target */
+        width: 50px;
+        height: 50px;
+        border-radius: 13px;
+    }
+
+    /* On mobile, floating button only shows icon (no expand) */
+    .originx-floating-app:hover {
+        width: 50px;
+        background: #0b1220;
+        transform: none;
+        box-shadow:
+            0 12px 35px rgba(11, 18, 32, 0.28),
+            0 0 0 1px rgba(255, 255, 255, 0.06);
+    }
+
+    .originx-floating-app:hover .originx-floating-app__label {
+        max-width: 0;
+        opacity: 0;
+        margin-right: 0;
+    }
+
+    .originx-floating-app:hover .originx-floating-app__icon {
+        margin-left: 13px;
+        margin-right: 13px;
+    }
+}
+
+/* Ensure floating CTA stays above mobile bottom nav (z-index 150)
+   but below chatbot (z-index 99999). Value 1000 handles this. */
+
+/* ==========================================================
+   ALSO: account for mobile-bottom-nav on very small screens.
+   The mobile-bottom-nav is z-index: 150 and sits fixed at the
+   bottom. The floating CTA is above it via z-index: 1000 and
+   the bottom position already clears the chatbot.
+   ========================================================== */

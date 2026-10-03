@@ -7,6 +7,7 @@
     <meta name="description" content="OriginX gives every product a verifiable digital identity.">
     <title>OriginX | Product trust infrastructure</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="app-download.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.0.3/qrcode.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -33,14 +34,22 @@
                     onclick="goToSection('solutions')">Solutions</a><a
                     onclick="goToSection('technology')">Technology</a><a
                     onclick="goToSection('roadmap')">Roadmap</a><button class="btn btn-primary btn-small"
-                    onclick="goToVerify()">Verify a product</button></nav>
+                    onclick="goToVerify()">Verify a product</button><a
+                    class="btn btn-primary btn-small originx-navbar-app"
+                    href="/OriginX.apk"
+                    download="OriginX.apk"
+                    aria-label="Download OriginX Android App"><svg class="originx-navbar-app__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 1 7 7v1h1a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-1a7 7 0 0 1-14 0h-1a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h1V9a7 7 0 0 1 7-7zm0 2a5 5 0 0 0-5 5v2h10V9a5 5 0 0 0-5-5zm-1 4h2v1h-2V8zm-3 5a5 5 0 0 0 8 4V12H8v1zm3 2h2v1h-2v-1z"/></svg>Download App</a></nav>
             <button class="menu-toggle" id="menuToggle" aria-label="Open navigation"
                 aria-expanded="false"><span></span><span></span><span></span></button>
         </div>
         <div class="mobile-menu" id="mobileMenu"><a onclick="goToSection('product')">Product</a><a
                 onclick="goToSection('solutions')">Solutions</a><a onclick="goToSection('technology')">Technology</a><a
                 onclick="goToSection('roadmap')">Roadmap</a><button class="btn btn-primary"
-                onclick="goToVerify()">Verify a product</button></div>
+                onclick="goToVerify()">Verify a product</button><a
+                class="btn originx-mobile-app-download"
+                href="/OriginX.apk"
+                download="OriginX.apk"
+                aria-label="Download OriginX Android App"><svg class="originx-navbar-app__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 1 7 7v1h1a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-1a7 7 0 0 1-14 0h-1a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h1V9a7 7 0 0 1 7-7zm0 2a5 5 0 0 0-5 5v2h10V9a5 5 0 0 0-5-5zm-1 4h2v1h-2V8zm-3 5a5 5 0 0 0 8 4V12H8v1zm3 2h2v1h-2v-1z"/></svg>Download App</a></div>
     </header>
     <main>
         <div id="homeView" class="app-view active">
@@ -379,6 +388,20 @@
             class="primary">⌕<span>Verify</span></a><a href="#"
             data-mobile-action="industries">◈<span>Sectors</span></a><a href="#"
             data-mobile-action="contact">✉<span>Contact</span></a></nav>
+    <!-- Floating App Download CTA -->
+    <a
+        id="originx-floating-app"
+        class="originx-floating-app"
+        href="/OriginX.apk"
+        download="OriginX.apk"
+        aria-label="Download OriginX Android App"
+        title="Download OriginX Android App"
+    >
+        <svg class="originx-floating-app__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17 1.01 7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14zm-4.2-5.78v1.75l3.2-2.99L12.8 9v1.78C9.39 11.23 8 13.06 8 15c1.08-1.4 2.7-2.08 4.8-2.78z"/>
+        </svg>
+        <span class="originx-floating-app__label">Download App</span>
+    </a>
     <script src="script.js"></script>
     <script src="Chatbot.js"></script>
 
