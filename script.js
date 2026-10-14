@@ -844,6 +844,11 @@ function renderIndustryView(industryId) {
     const otherSectors = Object.keys(INDUSTRIES).filter(k => k !== industryId);
     const container = document.getElementById('industryContent');
 
+    if (industryId === 'agriculture') {
+        renderAgricultureIndustryView(ind, otherSectors, container);
+        return;
+    }
+
     container.innerHTML = `
         <section class="industry-detail-hero">
             <div class="container">
@@ -930,6 +935,261 @@ function renderIndustryView(industryId) {
             </div>
         </section>
     `;
+}
+
+function renderAgricultureIndustryView(ind, otherSectors, container) {
+    const sampleId = ind.sampleIds[0];
+    const sampleProduct = PRODUCTS[sampleId];
+    const categories = [
+        { name: 'Rice & grains', label: 'The staple harvest', detail: 'Field, harvest, and batch information', image: 'assets/agriculture-fields.png', alt: 'Golden morning light over Indian rice fields and green crops' },
+        { name: 'Pulses & legumes', label: 'Grown for nourishment', detail: 'Origin and handling records', image: 'https://images.unsplash.com/photo-1518843875459-f738682238a6?auto=format&fit=crop&w=900&q=85', alt: 'Fresh agricultural produce gathered for market' },
+        { name: 'Indian spices', label: 'A heritage of flavour', detail: 'Regional crops and product journeys', image: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=85', alt: 'Colorful Indian spices arranged for food preparation' },
+        { name: 'Fresh produce', label: 'From soil to table', detail: 'Available dates and handling information', image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=85', alt: 'Freshly harvested vegetables at a produce market' },
+        { name: 'Edible oils', label: 'Made from the harvest', detail: 'Product and batch details', image: 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=900&q=85', alt: 'Golden cooking oil and ingredients on a table' },
+        { name: 'Packaged foods', label: 'Ready for the journey', detail: 'Label-linked product information', image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=85', alt: 'Freshly baked bread made from agricultural grain' }
+    ];
+
+    container.innerHTML = `
+        <div class="agriculture-page">
+            <section class="agri-hero">
+                <div class="agri-hero-photo" role="img" aria-label="Farmers tending green rice fields in the warm light of sunrise"></div>
+                <div class="agri-hero-shade"></div>
+                <div class="container agri-hero-inner">
+                    <div class="agri-hero-copy">
+                        <p class="agri-eyebrow"><span></span> Agriculture <i aria-hidden="true">•</i> Food <i aria-hidden="true">•</i> Traceability</p>
+                        <h1>Know Your Food.<br><em>Trust Its Journey.</em></h1>
+                        <p class="agri-hero-lede">From the fields where food begins to the markets and families it reaches, OriginX helps bring greater transparency to agricultural supply chains.</p>
+                        <p class="agri-hero-support">Discover product origins, explore available traceability records, and make more informed choices about the food you buy.</p>
+                        <div class="agri-actions">
+                            <button class="agri-button agri-button-primary" type="button" onclick="scrollToAgricultureJourney()">Explore Farm-to-Fork Traceability <span aria-hidden="true">↘</span></button>
+                            <button class="agri-button agri-button-outline" type="button" onclick="goToVerify()">Verify a Product <span aria-hidden="true">→</span></button>
+                        </div>
+                        <p class="agri-hero-note"><span aria-hidden="true">✳</span> A connected record for every participating product journey</p>
+                    </div>
+                    <div class="agri-hero-note-card" aria-label="Traceability connects a product's origin, journey, and available records">
+                        <span class="agri-note-kicker">A journey, made visible</span>
+                        <strong>Origin <i>→</i> Journey <i>→</i> Trust</strong>
+                        <span>Available product information, connected in one place.</span>
+                    </div>
+                </div>
+                <span class="agri-hero-caption">A field in the first light · India</span>
+            </section>
+
+            <section class="agri-trust" aria-label="Traceability information">
+                <div class="container">
+                    <div class="agri-trust-heading">
+                        <div><p class="agri-section-kicker">A clearer view of the journey</p><h2>Transparency at Every Stage.</h2></div>
+                        <p class="agri-section-intro">Better access to product information helps businesses and consumers understand the journey behind the food they choose.</p>
+                    </div>
+                    <div class="agri-trust-points">
+                        <article><span class="agri-trust-number">01</span><span class="agri-trust-icon" aria-hidden="true">⌖</span><h3>Product origin</h3><p>Understand where an agricultural product comes from.</p></article>
+                        <article><span class="agri-trust-number">02</span><span class="agri-trust-icon" aria-hidden="true">⌁</span><h3>Traceable journey</h3><p>Explore available records of product movement through the supply chain.</p></article>
+                        <article><span class="agri-trust-number">03</span><span class="agri-trust-icon" aria-hidden="true">▤</span><h3>Quality information</h3><p>Access relevant quality, handling, or documentation records when available.</p></article>
+                        <article><span class="agri-trust-number">04</span><span class="agri-trust-icon" aria-hidden="true">✳</span><h3>Consumer confidence</h3><p>Make more informed decisions using accessible product information.</p></article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="agri-story agri-section">
+                <div class="container agri-story-grid agri-reveal">
+                    <div class="agri-story-image">
+                        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=85" alt="Fresh vegetables selected at an agricultural produce market" width="1200" height="900" loading="lazy">
+                        <span class="agri-image-caption">A closer look at what reaches the table</span>
+                    </div>
+                    <div class="agri-story-copy">
+                        <p class="agri-section-kicker">Freshness starts with information</p>
+                        <h2>Freshness You Can Understand.<br><em>Information You Can Trust.</em></h2>
+                        <p class="agri-section-intro">Knowing more about a product's journey can help you make better-informed food choices. OriginX brings relevant product and traceability information closer to the people who need it.</p>
+                        <div class="agri-editorial-list">
+                            <article><span class="agri-list-number">01</span><div><h3>Understand product origins</h3><p>Discover available information about where your food comes from and the agricultural journey behind it.</p></div><span class="agri-list-mark" aria-hidden="true">↗</span></article>
+                            <article><span class="agri-list-number">02</span><div><h3>Explore relevant product records</h3><p>Access available batch details, dates, handling information, and other recorded information that may help you understand a product.</p></div><span class="agri-list-mark" aria-hidden="true">↗</span></article>
+                            <article><span class="agri-list-number">03</span><div><h3>Make informed food choices</h3><p>Use accessible product information to make more informed decisions when selecting agricultural products and food.</p></div><span class="agri-list-mark" aria-hidden="true">↗</span></article>
+                        </div>
+                        <p class="agri-freshness-note">Freshness assessment depends on relevant dates, storage conditions, handling information, and appropriate quality checks. Traceability alone does not guarantee freshness, shelf life, or product quality.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="agri-traceability agri-section">
+                <div class="container">
+                    <div class="agri-heading-row agri-reveal">
+                        <div><p class="agri-section-kicker">Know where it comes from</p><h2>Every Product<br>Has an Origin.</h2></div>
+                        <p class="agri-section-intro">Traceability helps connect agricultural products with the information behind their journey, from production through processing and distribution.</p>
+                    </div>
+                    <div class="agri-benefit-grid">
+                        <article class="agri-benefit agri-reveal"><span>01 <i>⌖</i></span><h3>Origin transparency</h3><p>Understand the recorded source of an agricultural product and its associated origin information.</p></article>
+                        <article class="agri-benefit agri-reveal"><span>02 <i>▤</i></span><h3>Batch-level visibility</h3><p>Explore available batch identifiers and related records to understand the product more clearly.</p></article>
+                        <article class="agri-benefit agri-reveal"><span>03 <i>⌁</i></span><h3>Supply-chain visibility</h3><p>Follow documented movement through participating stages of the supply chain where information is available.</p></article>
+                        <article class="agri-benefit agri-reveal"><span>04 <i>↗</i></span><h3>Informed purchasing</h3><p>Give consumers and businesses access to relevant product information that supports better-informed purchasing decisions.</p></article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="agri-journey agri-section" id="agriculture-journey">
+                <div class="container">
+                    <div class="agri-heading-row agri-reveal">
+                        <div><p class="agri-section-kicker">From farm to fork</p><h2>From Indian Soil<br>to Your Table.</h2></div>
+                        <p class="agri-section-intro">Discover how agricultural products move through the supply chain and how traceability can help make that journey more transparent.</p>
+                    </div>
+                    <ol class="agri-journey-list">
+                        ${[
+                            ['Cultivation', 'Food begins with the land, the farmer, and the agricultural practices used to grow the crop.', 'assets/agriculture-fields.png', 'An Indian farmer tending green crops in a rice field'],
+                            ['Harvesting', "Harvest records and relevant product information can help establish the beginning of a product's documented journey.", 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=700&q=80', 'Cultivated fields ready for harvest in warm early light'],
+                            ['Processing', "Relevant processing and handling information can help businesses maintain a clearer record of the product's journey.", 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=80', 'Grain transformed into food during processing'],
+                            ['Packaging', 'Product labels and batch identifiers can connect physical products with their available digital information.', 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=700&q=80', 'Agricultural spices ready to be handled and packaged'],
+                            ['Distribution', 'Recorded supply-chain movements can help provide greater visibility as products travel toward retailers and markets.', 'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=700&q=80', 'Fresh produce on its way to markets and retailers'],
+                            ['Verification', 'Where supported, consumers and businesses can access available product information through the OriginX verification experience.', 'https://images.unsplash.com/photo-1579113800032-c38bd7635818?auto=format&fit=crop&w=700&q=80', 'A person using a smartphone to access product information']
+                        ].map(([title, description, image, alt], index) => `
+                            <li class="agri-journey-step agri-reveal">
+                                <div class="agri-journey-photo"><img src="${image}" alt="${alt}" width="700" height="460" loading="lazy"><span class="agri-step-number">0${index + 1}</span></div>
+                                <div class="agri-journey-copy"><span class="agri-step-icon" aria-hidden="true">${['⌁', '✳', '⌘', '▧', '⇢', '⌕'][index]}</span><h3>${title}</h3><p>${description}</p></div>
+                            </li>
+                        `).join('')}
+                    </ol>
+                    <p class="agri-journey-disclaimer">These are illustrative supply-chain stages. The records available depend on participating businesses and the information they provide. OriginX connects product information; it does not independently inspect or certify products.</p>
+                </div>
+            </section>
+
+            <section class="agri-heritage agri-section">
+                <div class="container agri-heritage-grid agri-reveal">
+                    <div class="agri-heritage-copy">
+                        <p class="agri-section-kicker">Knowledge carried forward</p>
+                        <h2>Rooted in Indian Soil.<br><em>Connected by Trust.</em></h2>
+                        <p class="agri-section-intro">India's agricultural heritage is built on generations of farming knowledge, diverse crops, regional traditions, and the people who bring food to our tables.</p>
+                        <p class="agri-section-intro agri-heritage-followup">Transparent product information can help preserve the documented story of agricultural goods as they travel from their origins toward the people who depend on them.</p>
+                        <div class="agri-heritage-rule"><span aria-hidden="true">✳</span><span>Respect for origin. Clarity for the journey.</span></div>
+                    </div>
+                    <figure class="agri-heritage-image">
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=85" alt="A heritage-inspired arrangement of food and spices" width="1200" height="900" loading="lazy">
+                        <figcaption>Generations of care, carried into every harvest</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="agri-collection agri-section">
+                <div class="container">
+                    <div class="agri-heading-row agri-reveal">
+                        <div><p class="agri-section-kicker">The abundance of the land</p><h2>Every Crop<br><em>Has a Story.</em></h2></div>
+                        <p class="agri-section-intro">Explore the diversity of agricultural products and the importance of understanding their origins.</p>
+                    </div>
+                    <div class="agri-category-grid">
+                        ${categories.map((category, index) => `
+                            <article class="agri-category-card agri-reveal">
+                                <div class="agri-category-image"><img src="${category.image}" alt="${category.alt}" width="900" height="1100" loading="lazy"></div>
+                                <div class="agri-category-meta"><span>0${index + 1}</span><span>${category.label}</span></div>
+                                <h3>${category.name}</h3>
+                                <p>${category.detail}</p>
+                            </article>
+                        `).join('')}
+                    </div>
+                    <p class="agri-collection-note">Category imagery is illustrative; availability and records vary by participating product and supply chain.</p>
+                </div>
+            </section>
+
+            <section class="agri-participants agri-section">
+                <div class="container">
+                    <div class="agri-heading-row agri-reveal">
+                        <div><p class="agri-section-kicker">A shared food journey</p><h2>One Connected Journey.<br><em>Many Reasons to Trust.</em></h2></div>
+                        <p class="agri-section-intro">Better access to relevant product information can help every participant understand the part they play in the journey from farm to fork.</p>
+                    </div>
+                    <div class="agri-participant-grid">
+                        <article class="agri-participant agri-reveal"><span>01 / AT ORIGIN</span><h3>Farmers &amp; producers</h3><p>Help make available origin and production information more visible to downstream businesses and consumers.</p></article>
+                        <article class="agri-participant agri-reveal"><span>02 / IN TRANSFORMATION</span><h3>Food processors</h3><p>Organize relevant product, batch, and processing records where supported.</p></article>
+                        <article class="agri-participant agri-reveal"><span>03 / ON THE MOVE</span><h3>Distributors &amp; retailers</h3><p>Access available product information and documented supply-chain records.</p></article>
+                        <article class="agri-participant agri-reveal"><span>04 / AT THE TABLE</span><h3>Consumers</h3><p>Explore available product information to make more informed choices about the food they purchase.</p></article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="agri-compliance agri-section">
+                <div class="container">
+                    <div class="agri-compliance-head agri-reveal">
+                        <p class="agri-section-kicker">Records that support better decisions</p>
+                        <h2>Better Records.<br>Greater Transparency.</h2>
+                        <p class="agri-section-intro">Clear product records can help businesses organize relevant information and provide greater visibility into agricultural supply chains.</p>
+                    </div>
+                    <div class="agri-compliance-grid">
+                        <article class="agri-compliance-item agri-reveal"><span class="agri-compliance-icon" aria-hidden="true">▤</span><h3>Quality documentation</h3><p>Keep relevant quality records and supporting documentation accessible where these records are maintained by participating businesses.</p></article>
+                        <article class="agri-compliance-item agri-reveal"><span class="agri-compliance-icon" aria-hidden="true">⌖</span><h3>Handling and storage information</h3><p>Make relevant recorded handling and storage information easier to understand when such information is available.</p></article>
+                        <article class="agri-compliance-item agri-reveal"><span class="agri-compliance-icon" aria-hidden="true">↗</span><h3>Supply-chain accountability</h3><p>Improve visibility into documented product movements and associated records across participating supply-chain stages.</p></article>
+                    </div>
+                    <p class="agri-compliance-note">Traceability alone does not make a product safe. OriginX does not independently inspect food, test samples, certify products, or guarantee regulatory compliance. Applicable requirements and approvals are determined by relevant authorities, including FSSAI where appropriate.</p>
+                </div>
+            </section>
+
+            <section class="agri-verify agri-section">
+                <div class="container agri-verify-grid agri-reveal">
+                    <div class="agri-verify-visual">
+                        <span class="agri-illustrative-tag">Illustrative example</span>
+                        <div class="agri-product-label">
+                            <div class="agri-label-brand"><span class="agri-grain-mark" aria-hidden="true">✳</span><span>OriginX <small>PRODUCT PASSPORT</small></span></div>
+                            <div class="agri-label-art" aria-hidden="true">🌾</div>
+                            <p class="agri-label-eyebrow">AGRICULTURAL PRODUCT</p>
+                            <h3>Origin-linked product</h3>
+                            <div class="agri-label-bottom">${generateQrSvg(sampleId)}<span>Scan to view<br>available details</span></div>
+                        </div>
+                    </div>
+                    <div class="agri-verify-copy">
+                        <p class="agri-section-kicker">Scan. Explore. Understand.</p>
+                        <h2>More Than a Label.<br><em>A Window Into Your Product.</em></h2>
+                        <p class="agri-section-intro">Product verification can help people access available information about an agricultural product and understand its recorded journey.</p>
+                        <div class="agri-verification-steps">
+                            <article><span>01</span><div><h3>Find the product</h3><p>Locate the product's QR code, batch identifier, or other supported verification method.</p></div></article>
+                            <article><span>02</span><div><h3>Access available information</h3><p>Use the existing OriginX verification experience to view the information associated with the product.</p></div></article>
+                            <article><span>03</span><div><h3>Understand its journey</h3><p>Explore available origin, batch, handling, or supply-chain records and use them to make a more informed decision.</p></div></article>
+                        </div>
+                        <div class="agri-record-preview">
+                            <span class="agri-preview-label">Illustrative product record</span>
+                            <div><span>Product name</span><strong>Available in the product record</strong></div>
+                            <div><span>Origin</span><strong>Shown when provided</strong></div>
+                            <div><span>Dates &amp; batch</span><strong>Available recorded details</strong></div>
+                            <div><span>Traceability</span><strong>Participating supply-chain records</strong></div>
+                        </div>
+                        <button class="agri-button agri-button-dark" type="button" onclick="goToVerify()">Verify a Product <span aria-hidden="true">→</span></button>
+                        <p class="agri-example-note">Demonstration content only. The QR links to the existing illustrative sample record, not a real-world product claim.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="agri-closing">
+                <div class="container agri-closing-inner agri-reveal">
+                    <p class="agri-section-kicker">The next chapter begins at origin</p>
+                    <h2>Every Journey<br>Deserves to Be Known.</h2>
+                    <p>Bring product origins, available traceability information, and greater supply-chain transparency closer to the people who need them.</p>
+                    <div class="agri-actions">
+                        <button class="agri-button agri-button-light" type="button" onclick="goToSection('product')">Explore OriginX <span aria-hidden="true">→</span></button>
+                        <button class="agri-button agri-button-outline" type="button" onclick="goToVerify()">Verify a Product <span aria-hidden="true">→</span></button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="agri-other-sectors">
+                <div class="container"><p>Explore more of OriginX</p><div class="other-sectors-grid">
+                    ${otherSectors.map(key => `<button type="button" class="other-sector-chip" onclick="goToIndustry('${key}')"><span class="ic" aria-hidden="true">${INDUSTRIES[key].icon}</span>${escapeHtml(INDUSTRIES[key].name)}</button>`).join('')}
+                </div></div>
+            </section>
+        </div>
+    `;
+
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+        container.classList.add('agri-motion-ready');
+        const revealObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        container.querySelectorAll('.agri-reveal').forEach(element => revealObserver.observe(element));
+    }
+}
+
+function scrollToAgricultureJourney() {
+    const journeySection = document.getElementById('agriculture-journey');
+    const top = journeySection.getBoundingClientRect().top + window.scrollY - document.querySelector('.site-header').offsetHeight;
+    const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth';
+    window.scrollTo({ top: Math.max(top, 0), behavior });
 }
 
 // ===================================================================
