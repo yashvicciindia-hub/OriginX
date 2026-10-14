@@ -115,6 +115,98 @@ const PRODUCTS = {
             { title: "Boutique Distribution", location: "Luxury Retail Partners, New Delhi", date: "15 Jan 2026", desc: "Delivered to authorized boutiques with full provenance documentation." }
         ]
     },
+    "TIN-ECO-4531": {
+        industry: "ecommerce",
+        name: "Signature Snack Box",
+        category: "E-commerce",
+        producedDate: "12 Apr 2026",
+        expiryDate: "12 Jul 2026",
+        originLocation: "Bengaluru, Karnataka",
+        weight: "1.2 kg curated box",
+        composition: [
+            ["Category", "Ready-to-ship grocery bundles"],
+            ["Fulfilment SLA", "48-hour dispatch"],
+            ["Packaging", "Tamper-evident, branded cartons"],
+            ["Verification", "Batch scan before dispatch"]
+        ],
+        certifications: ["E-commerce Fulfilment Verified", "Packaging Integrity Confirmed", "Customer Origin Proof Enabled", "Regional Dispatch Log Matched"],
+        journey: [
+            { title: "Warehouse Picking", location: "Bengaluru Fulfilment Center", date: "12 Apr 2026", desc: "Carton assembled from verified vendor stock and assigned a digital dispatch record." },
+            { title: "Packaging & Seal Check", location: "Pack Station 3, Bengaluru", date: "12 Apr 2026", desc: "Custom shipment carton sealed with tamper-proof labels and QR tokens." },
+            { title: "Quality Check", location: "Quality Control Desk, Bengaluru", date: "13 Apr 2026", desc: "Order component list validated against supplier evidence and dispatch checklist." },
+            { title: "Courier Handover", location: "Blue Dart Hub, Bengaluru", date: "13 Apr 2026", desc: "Shipment logged for regional transport with origin and movement proof attached." },
+            { title: "Customer Delivery", location: "Bengaluru Metro Delivery Zone", date: "15 Apr 2026", desc: "Customer receives box with QR for authenticity and receipt verification." }
+        ]
+    },
+    "TIN-IMP-6408": {
+        industry: "import-export",
+        name: "Export-Ready Home Textiles",
+        category: "Import & Export",
+        producedDate: "02 May 2026",
+        expiryDate: "—",
+        originLocation: "Jaipur, Rajasthan",
+        weight: "18 cartons, 580 kg",
+        composition: [
+            ["Product", "Handcrafted home textile sets"],
+            ["Documentation", "Commercial invoice + origin proof"],
+            ["Container", "ISO-standard export crate"],
+            ["Destination", "Dubai, UAE"]
+        ],
+        certifications: ["Origin Certificate Verified", "Export Compliance Logged", "Shipping Documentation Matched", "Destination Compliance Ready"],
+        journey: [
+            { title: "Manufacturing Batch", location: "Jaipur Textile Unit", date: "02 May 2026", desc: "Goods manufactured under quality-controlled production records and origin tagging." },
+            { title: "Inspection & Packaging", location: "Export Packaging Zone, Jaipur", date: "05 May 2026", desc: "Cartons packed, labeled, and verified against invoice values and SKU data." },
+            { title: "Customs Documentation", location: "Jaipur Port Clearance", date: "07 May 2026", desc: "Certificates, origin proofs and movement records uploaded to the digital export ledger." },
+            { title: "Shipping to Port", location: "Nhava Sheva Port, Maharashtra", date: "09 May 2026", desc: "Container loaded and linked to a traceable shipment record for customs and clients." },
+            { title: "International Delivery", location: "Jebel Ali Port, UAE", date: "18 May 2026", desc: "Buyer receives receiving confirmation with verified product origin and shipment status." }
+        ]
+    },
+    "TIN-MSM-1709": {
+        industry: "msme",
+        name: "Handcrafted Brass Temple Set",
+        category: "MSMEs",
+        producedDate: "18 Mar 2026",
+        expiryDate: "—",
+        originLocation: "Moradabad, Uttar Pradesh",
+        weight: "4.8 kg artisan set",
+        composition: [
+            ["Material", "Brass with hand-finished polish"],
+            ["Craft technique", "Casted and hand-engraved"],
+            ["Workshop", "Registered micro-enterprise unit"],
+            ["Inspection", "Quality and finish checked"]
+        ],
+        certifications: ["Artisan Unit Verified", "Finish Quality Recorded", "Origin of Craft Confirmed", "Export-Ready Documentation Linked"],
+        journey: [
+            { title: "Material Procurement", location: "Moradabad Metal Yard", date: "18 Mar 2026", desc: "Brass supply validated against local supplier and artisan output records." },
+            { title: "Casting & Engraving", location: "MSME Workshop, Moradabad", date: "21 Mar 2026", desc: "Each unit hand-finished by trained artisans, assigned a workshop batch ID." },
+            { title: "Quality Inspection", location: "In-house QC Bench, Moradabad", date: "24 Mar 2026", desc: "Polish, finish, and craftsmanship checked before packaging and dispatch." },
+            { title: "Packaging & QR", location: "Workshop Dispatch Desk", date: "25 Mar 2026", desc: "Order packed with QR-linked materials and artisan history for customers." },
+            { title: "Retail Hand-off", location: "Regional Design Store, Lucknow", date: "28 Mar 2026", desc: "Consumer receives a physically traceable product with provenance and maker evidence." }
+        ]
+    },
+    "TIN-JWL-2156": {
+        industry: "jewellery",
+        name: "Aurelia Gold Necklace",
+        category: "Jewellery",
+        producedDate: "24 Apr 2026",
+        expiryDate: "—",
+        originLocation: "Jaipur, Rajasthan",
+        weight: "18.2 g, 22K gold",
+        composition: [
+            ["Metal purity", "22K gold"],
+            ["Stone", "Rose-cut diamond accents"],
+            ["Craftsmanship", "Hand-set by master jeweller"],
+            ["Verification", "Material origin linked to batch"]
+        ],
+        certifications: ["Hallmark Verified", "Material Origin Recorded", "Craftsmanship Proof Linked", "Retail Authenticity Checked"],
+        journey: [
+            { title: "Gold Procurement", location: "Jaipur Assaying House", date: "24 Apr 2026", desc: "Gold purchased from certified bullion partners and measured for purity and weight." },
+            { title: "Design & Casting", location: "Jewellery Studio, Jaipur", date: "26 Apr 2026", desc: "Design finalized and cast with batch traceability encoded into the work order." },
+            { title: "Stone Setting & Finish", location: "Workshop Bench, Jaipur", date: "30 Apr 2026", desc: "Master jeweller set stones and completed final polish under supervised checks." },
+            { title: "Certification & QR", location: "Hallmark Office, Jaipur", date: "03 May 2026", desc: "Hallmark record and QR-linked digital provenance generated for the piece." },
+            { title: "Store Dispatch", location: "Luxury Gallery, Jaipur", date: "06 May 2026", desc: "Ready for retail sale with material origin, craftsmanship and authenticity verification." }
+        ]
+    },
 };
 
 // ---- Industry detail content ----
@@ -206,6 +298,94 @@ const INDUSTRIES = {
             ["Authenticity Hologram Linkage", "Physical hologram linked to the digital provenance record."]
         ],
         sampleIds: ["TIN-TEX-8843"]
+    },
+    ecommerce: {
+        icon: "🛒",
+        name: "E-commerce",
+        tagline: "Build buyer confidence with traceable product origins, transparent fulfilment, and proof of authenticity across online retail flows.",
+        problem: "Traceability helps digital commerce verify product origin, reduce duplicates, and win trust across marketplaces and customer channels.",
+        stats: [["1M+", "Orders Verified"], ["48h", "Dispatch SLA"], ["99.9%", "Shipment Proof"], ["7", "Avg. Trace Steps"]],
+        flow: [
+            ["📦", "Vendor Intake", "Verification data captured at source and packing stage"],
+            ["🧾", "Order Validation", "SKU, journey and origin checked before dispatch"],
+            ["📦", "Packing & Seal", "Tamper-evident packaging with QR proof assigned"],
+            ["🚚", "Logistics Tracking", "Movement logged across dispatch and last-mile partners"],
+            ["📲", "Consumer Scan", "Customer confirms authenticity before purchase or return"],
+            ["🔁", "Return & Claim Support", "Proof supports refund claims and fraud prevention"]
+        ],
+        certifications: [
+            ["Marketplace Shipment Proof", "Confirms the correct product and lot reached the customer."],
+            ["Fulfilment Integrity", "Prevents counterfeits and parcel mix-ups during last-mile movement."],
+            ["Customer Trust Signals", "Shows origin details and dispatch proof directly to buyers."],
+            ["Returns Verification", "Links customer claims to the right batch and supply record."]
+        ],
+        sampleIds: ["TIN-ECO-4531"]
+    },
+    "import-export": {
+        icon: "🚢",
+        name: "Import & Export",
+        tagline: "Verify origin, documentation, and product movement across global trade networks with evidence that travels with every shipment.",
+        problem: "Traceability helps import and export teams prove origin, reduce customs risk, and defend compliance across international supply chains.",
+        stats: [["25+", "Trade Corridors"], ["100%", "Documentation Check"], ["5x", "Faster Customs Review"], ["7", "Avg. Trade Steps"]],
+        flow: [
+            ["🏭", "Manufacture & Batch Log", "Production and origin records recorded at source"],
+            ["📄", "Export Docs", "Invoices, certificates and shipment records cross-checked"],
+            ["🚢", "Port & Customs", "Proof matched to container, route and destination"],
+            ["📦", "Container Sealing", "Movement and integrity validated through transit"],
+            ["🌍", "Destination Clearance", "Buyer receives a traceable shipment record"],
+            ["✅", "Proof of Origin", "Confirms compliance for each delivered batch"]
+        ],
+        certifications: [
+            ["Origin Certificate Verification", "Matches country-of-origin claims to source and batch evidence."],
+            ["Customs Compliance Check", "Prevents documentation gaps before border clearance."],
+            ["Trade Documentation Integrity", "Links invoices, shipping records and product batches."],
+            ["Destination Readiness", "Ensures shipments are review-ready for international buyers."]
+        ],
+        sampleIds: ["TIN-IMP-6408"]
+    },
+    msme: {
+        icon: "🏭",
+        name: "MSMEs",
+        tagline: "Help small and medium businesses demonstrate authenticity, quality and trusted sourcing with low-friction digital proof.",
+        problem: "Traceability helps MSMEs build trust, protect artisan and manufacturer reputation, and unlock new procurement opportunities.",
+        stats: [["70K+", "Micro Units"], ["2x", "Buyer Trust Lift"], ["<1h", "Setup Time"], ["5", "Avg. Trace Steps"]],
+        flow: [
+            ["🧵", "Source & Raw Material", "Supplier proof and material origin logged"],
+            ["🛠️", "Workshop Production", "Manufacturing stages recorded in real time"],
+            ["🔍", "Inspection", "Quality and finish checks tied to the lot"],
+            ["📦", "Packaging & QR", "A digital proof is attached before dispatch"],
+            ["🚚", "Market Distribution", "Connected to local and regional buyers"],
+            ["🤝", "Trust Signal", "Buyers verify maker, batch and proof at a glance"]
+        ],
+        certifications: [
+            ["Artisan & Supplier Verification", "Tracks the actual source behind each manufactured batch."],
+            ["Quality Audit Trail", "Documents checks for finish, integrity and customer confidence."],
+            ["Micro-Enterprise Proof", "Helps smaller producers show credible, traceable operations."],
+            ["Buyer Confidence", "Builds trust in sourcing and product authenticity."]
+        ],
+        sampleIds: ["TIN-MSM-1709"]
+    },
+    jewellery: {
+        icon: "💍",
+        name: "Jewellery",
+        tagline: "Establish confidence through transparent material origins, craftsmanship proof and product provenance for premium jewellery.",
+        problem: "Traceability helps jewellery makers verify metal purity, sourcing and craftsmanship while protecting premium brand trust.",
+        stats: [["22K", "Purity Ready"], ["100%", "Material Proof"], ["GI", "Craft Link"], ["6", "Avg. Trace Steps"]],
+        flow: [
+            ["🪙", "Metal Sourcing", "Gold and stones verified at the point of purchase"],
+            ["🧿", "Design & Casting", "Craft records captured before finishing"],
+            ["💎", "Stone Setting", "Each jewel linked to a verified work order"],
+            ["✅", "Assay & Hallmark", "Metal purity and finishing validated"],
+            ["🏷️", "QR Proof", "Authenticity and provenance linked to the final piece"],
+            ["🛍️", "Retail Confidence", "Customers scan to confirm origin and craftsmanship"]
+        ],
+        certifications: [
+            ["Hallmark Verification", "Proves purity and certification for the final piece."],
+            ["Material Origin Proof", "Confirms responsible sourcing and metal traceability."],
+            ["Craftsmanship Tracking", "Links each finished jewellery item to the maker and stage."],
+            ["Consumer Authenticity Signal", "Enables premium trust before customer purchase."]
+        ],
+        sampleIds: ["TIN-JWL-2156"]
     },
 };
 

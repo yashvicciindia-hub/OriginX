@@ -62,9 +62,8 @@
                             <span class="eyebrow-mark"></span>
                         </div>
                         <h1>
-                            <span>India's First</span>
-                            <span>National Product</span>
-                            <span class="headline-accent">Traceability</span>
+                            <span>India's First National</span>
+                            <span>Product <span class="headline-accent">Traceability</span></span>
                             <span>Infrastructure</span>
                         </h1>
                         <p class="hero-lede">OriginX gives every batch a secure digital identity, connecting source,
@@ -169,26 +168,94 @@
                         </div><button class="text-link" onclick="goToSection('solutions')">View all sectors →</button>
                     </div>
                     <div class="industries-grid">
-                        <article class="industry-card" onclick="goToIndustry('agriculture')">
-                            <div class="industry-icon-box">01</div>
-                            <h3>Agriculture &amp; Food</h3>
-                            <p>Farm-to-fork provenance, food safety and export readiness.</p>
-                        </article>
-                        <article class="industry-card" onclick="goToIndustry('pharma')">
-                            <div class="industry-icon-box">02</div>
-                            <h3>Pharmaceuticals</h3>
-                            <p>Batch accountability and anti-counterfeit controls.</p>
-                        </article>
-                        <article class="industry-card" onclick="goToIndustry('fmcg')">
-                            <div class="industry-icon-box">03</div>
-                            <h3>FMCG &amp; Cosmetics</h3>
-                            <p>Ingredient transparency and brand confidence at scale.</p>
-                        </article>
-                        <article class="industry-card" onclick="goToIndustry('textiles')">
-                            <div class="industry-icon-box">04</div>
-                            <h3>Textiles &amp; Luxury</h3>
-                            <p>Protect provenance, craft and ethical sourcing claims.</p>
-                        </article>
+                        <a class="industry-card" href="#industry/agriculture" aria-label="View Agriculture &amp; Food details" onclick="goToIndustry('agriculture'); return false;">
+                            <div class="industry-card-media">
+                                <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80" alt="Golden wheat fields and rice agriculture in India" loading="lazy">
+                                <span class="industry-card-number">01</span>
+                            </div>
+                            <div class="industry-card-content">
+                                <h3>Agriculture &amp; Food</h3>
+                                <p>Farm-to-fork provenance, food safety and export readiness.</p>
+                                <span class="industry-card-arrow" aria-hidden="true">→</span>
+                            </div>
+                        </a>
+                        <a class="industry-card" href="#industry/pharma" aria-label="View Pharmaceuticals details" onclick="goToIndustry('pharma'); return false;">
+                            <div class="industry-card-media">
+                                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80" alt="Premium pharmaceutical packaging and medical supplies arranged neatly" loading="lazy">
+                                <span class="industry-card-number">02</span>
+                            </div>
+                            <div class="industry-card-content">
+                                <h3>Pharmaceuticals</h3>
+                                <p>Batch accountability and anti-counterfeit controls.</p>
+                                <span class="industry-card-arrow" aria-hidden="true">→</span>
+                            </div>
+                        </a>
+                        <a class="industry-card" href="#industry/fmcg" aria-label="View FMCG &amp; Cosmetics details" onclick="goToIndustry('fmcg'); return false;">
+                            <div class="industry-card-media">
+                                <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80" alt="Elegant skincare bottles and cosmetic packaging" loading="lazy">
+                                <span class="industry-card-number">03</span>
+                            </div>
+                            <div class="industry-card-content">
+                                <h3>FMCG &amp; Cosmetics</h3>
+                                <p>Ingredient transparency and brand confidence at scale.</p>
+                                <span class="industry-card-arrow" aria-hidden="true">→</span>
+                            </div>
+                        </a>
+                        <a class="industry-card" href="#industry/textiles" aria-label="View Textiles &amp; Luxury details" onclick="goToIndustry('textiles'); return false;">
+                            <div class="industry-card-media">
+                                <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80" alt="Fine woven textiles and artisan luxury fabrics" loading="lazy">
+                                <span class="industry-card-number">04</span>
+                            </div>
+                            <div class="industry-card-content">
+                                <h3>Textiles &amp; Luxury</h3>
+                                <p>Protect provenance, craftsmanship and ethical sourcing claims.</p>
+                                <span class="industry-card-arrow" aria-hidden="true">→</span>
+                            </div>
+                        </a>
+                        <a class="industry-card" href="#industry/ecommerce" aria-label="View E-commerce details" onclick="goToIndustry('ecommerce'); return false;">
+                            <div class="industry-card-media">
+                                <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80" alt="Premium shipping boxes and e-commerce delivery packaging" loading="lazy">
+                                <span class="industry-card-number">05</span>
+                            </div>
+                            <div class="industry-card-content">
+                                <h3>E-commerce</h3>
+                                <p>Build buyer confidence with verifiable product origins and transparent supply chains.</p>
+                                <span class="industry-card-arrow" aria-hidden="true">→</span>
+                            </div>
+                        </a>
+                        <a class="industry-card" href="#industry/import-export" aria-label="View Import &amp; Export details" onclick="goToIndustry('import-export'); return false;">
+                            <div class="industry-card-media">
+                                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80" alt="Cargo containers and international shipping logistics" loading="lazy">
+                                <span class="industry-card-number">06</span>
+                            </div>
+                            <div class="industry-card-content">
+                                <h3>Import &amp; Export</h3>
+                                <p>Verify origin, documentation and product movement across global trade networks.</p>
+                                <span class="industry-card-arrow" aria-hidden="true">→</span>
+                            </div>
+                        </a>
+                        <a class="industry-card" href="#industry/msme" aria-label="View MSMEs details" onclick="goToIndustry('msme'); return false;">
+                            <div class="industry-card-media">
+                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80" alt="Skilled artisans working in an Indian manufacturing facility" loading="lazy">
+                                <span class="industry-card-number">07</span>
+                            </div>
+                            <div class="industry-card-content">
+                                <h3>MSMEs</h3>
+                                <p>Help small and medium businesses demonstrate authenticity, quality and trusted sourcing.</p>
+                                <span class="industry-card-arrow" aria-hidden="true">→</span>
+                            </div>
+                        </a>
+                        <a class="industry-card" href="#industry/jewellery" aria-label="View Jewellery details" onclick="goToIndustry('jewellery'); return false;">
+                            <div class="industry-card-media">
+                                <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80" alt="Elegant gold jewellery and gemstones in refined luxury presentation" loading="lazy">
+                                <span class="industry-card-number">08</span>
+                            </div>
+                            <div class="industry-card-content">
+                                <h3>Jewellery</h3>
+                                <p>Establish confidence through transparent material origins, craftsmanship and product provenance.</p>
+                                <span class="industry-card-arrow" aria-hidden="true">→</span>
+                            </div>
+                        </a>
                     </div>
                     <p class="industry-footnote">Also serving: Electronics, Automobiles, Healthcare Products, and
                         Industrial Manufacturing.</p>
