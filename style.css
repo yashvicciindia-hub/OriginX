@@ -268,9 +268,8 @@ a:focus-visible {
 .hero {
     position: relative;
     overflow: hidden;
-    color: #fff;
+    color: #173a2d;
     background:
-        linear-gradient(90deg, rgba(3, 24, 22, .62) 0%, rgba(3, 24, 22, .54) 24%, rgba(3, 24, 22, .28) 50%, rgba(3, 24, 22, .52) 100%),
         url("assets/home-header-bg.png") center center / cover no-repeat;
     border-top: 1px solid rgba(255, 255, 255, .04);
 }
@@ -280,9 +279,9 @@ a:focus-visible {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(90deg, rgba(7, 18, 20, .48) 0%, rgba(7, 18, 20, .10) 36%, rgba(7, 18, 20, .18) 48%, rgba(7, 18, 20, .42) 100%),
-        radial-gradient(circle at 72% 30%, rgba(213, 180, 91, .20), transparent 22%),
-        radial-gradient(circle at 50% 18%, rgba(129, 201, 156, .12), transparent 32%);
+        linear-gradient(90deg, rgba(255, 252, 244, .92) 0%, rgba(255, 252, 244, .78) 32%, rgba(255, 252, 244, .42) 55%, rgba(255, 252, 244, .10) 100%),
+        radial-gradient(ellipse at 18% 35%, rgba(255, 255, 255, .28), transparent 46%),
+        radial-gradient(circle at 72% 30%, rgba(213, 180, 91, .10), transparent 22%);
     pointer-events: none;
 }
 
@@ -291,8 +290,7 @@ a:focus-visible {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.04) 100%),
-        linear-gradient(90deg, rgba(0,0,0,.08), rgba(0,0,0,0) 24%, rgba(0,0,0,0) 76%, rgba(0,0,0,.08));
+        linear-gradient(180deg, rgba(255, 255, 255, .10) 0%, transparent 34%, rgba(119, 91, 42, .035) 100%);
     pointer-events: none;
 }
 
@@ -339,7 +337,7 @@ a:focus-visible {
 }
 
 .hero .eyebrow {
-    color: #d6bb6d;
+    color: #987528;
     font-size: 18px;
     letter-spacing: .2em;
     text-transform: uppercase;
@@ -347,7 +345,7 @@ a:focus-visible {
     font-weight: 700;
     margin: 0;
     line-height: 1;
-    text-shadow: 0 0 16px rgba(213, 180, 91, .18);
+    text-shadow: 0 1px 8px rgba(255, 252, 244, .55);
 }
 
 .hero h1 {
@@ -359,7 +357,7 @@ a:focus-visible {
     width: min(100%, 860px);
     font-size: clamp(3.1rem, 4vw, 5.8rem);
     line-height: 0.98;
-    color: rgba(247, 243, 232, .98);
+    color: #173a2d;
     margin: 0;
 }
 
@@ -382,15 +380,15 @@ a:focus-visible {
 }
 
 .headline-accent {
-    color: #d7b86a;
+    color: #b18b36;
     font-style: italic;
-    text-shadow: 0 0 24px rgba(215, 184, 106, .16);
+    text-shadow: 0 1px 8px rgba(255, 252, 244, .58);
 }
 
 .hero-lede {
     font-size: 17px;
     line-height: 1.6;
-    color: rgba(247, 243, 232, .9);
+    color: #35483e;
     max-width: 650px;
     margin: 28px 0 24px;
     font-weight: 500;
@@ -420,10 +418,10 @@ a:focus-visible {
 }
 
 .hero .btn-secondary {
-    background: rgba(10, 35, 27, .18);
-    border-color: rgba(213, 180, 91, .72);
-    color: #f7f3e8;
-    box-shadow: inset 0 0 0 1px rgba(213, 180, 91, .18);
+    background: rgba(255, 252, 244, .76);
+    border-color: rgba(152, 117, 40, .62);
+    color: #173a2d;
+    box-shadow: inset 0 0 0 1px rgba(213, 180, 91, .16);
 }
 
 .hero .btn:hover {
@@ -472,6 +470,12 @@ a:focus-visible {
 }
 
 @media (max-width: 720px) {
+    .hero::before {
+        background:
+            linear-gradient(180deg, rgba(255, 252, 244, .92) 0%, rgba(255, 252, 244, .82) 38%, rgba(255, 252, 244, .48) 66%, rgba(255, 252, 244, .12) 100%),
+            radial-gradient(ellipse at 18% 20%, rgba(255, 255, 255, .24), transparent 48%);
+    }
+
     .eyebrow-wrap {
         gap: 12px;
         max-width: 100%;
