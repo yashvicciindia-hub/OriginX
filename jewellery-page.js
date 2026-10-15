@@ -28,21 +28,21 @@ function renderJewelleryPage(container) {
         ['route', 'Follow Its Journey', 'Explore recorded milestones connecting materials, manufacturing, and finished jewellery.']
     ];
     const stages = [
-        { title: 'Material origin', image: '1590736969955-71cc94901144', alt: 'A close detail of jewellery materials and gemstones', copy: 'A jewellery story may begin with precious metal or a gemstone, alongside whatever source information has been recorded.', records: ['Material identification', 'Source details, where recorded', 'Supplier or batch reference', 'Available supporting records'] },
-        { title: 'Material processing', image: '1589363358753-4e6c6b9dbad9', alt: 'A close-up of carefully prepared fine jewellery', copy: 'Processing details can add context to material identifiers and recorded supplier or batch information.', records: ['Processing details, where available', 'Material or batch identifiers', 'Recorded processing events', 'Relevant supplier records'] },
+        { title: 'Material origin', image: '1599643478518-a784e5dc4c8f', alt: 'A close detail of jewellery materials and gemstones', copy: 'A jewellery story may begin with precious metal or a gemstone, alongside whatever source information has been recorded.', records: ['Material identification', 'Source details, where recorded', 'Supplier or batch reference', 'Available supporting records'] },
+        { title: 'Material processing', image: '1617038220319-276d3cfab638', alt: 'A close-up of carefully prepared fine jewellery', copy: 'Processing details can add context to material identifiers and recorded supplier or batch information.', records: ['Processing details, where available', 'Material or batch identifiers', 'Recorded processing events', 'Relevant supplier records'] },
         { title: 'Jewellery craftsmanship', image: '1558618666-fcd25c85cd64', alt: 'A craftsperson working carefully at a jewellery bench', copy: 'A finished piece may be connected with its maker or manufacturer and relevant production records.', records: ['Maker or manufacturer information', 'Product identity', 'Production batch reference, where applicable', 'Available manufacturing records'] },
         { title: 'Product identification', image: 'local-jewellery', alt: 'A ring and necklace arranged on a warm ivory surface', copy: 'A product identifier can provide a route to the information associated with a particular piece.', records: ['Product name and identifier', 'Recorded metal or gemstone details', 'Available hallmarking references', 'Relevant documentation, where recorded'] },
-        { title: 'Retail & customer', image: '1604881988758-f76ad2f7aad9', alt: 'A refined customer-facing product presentation', copy: 'Customers can explore available product details and use verification features supported by the product record.', records: ['Product identity', 'Available origin information', 'Relevant product records', 'Supported verification entry point'] }
+        { title: 'Retail & customer', image: '1603561591411-07134e71a2a9', alt: 'A refined customer-facing product presentation', copy: 'Customers can explore available product details and use verification features supported by the product record.', records: ['Product identity', 'Available origin information', 'Relevant product records', 'Supported verification entry point'] }
     ];
     const materials = [
-        { label: 'Precious metals', title: 'Metal details, where recorded', photo: '1589363358753-4e6c6b9dbad9', alt: 'Fine jewellery with a warm precious-metal finish', fields: ['Material type', 'Material identifier', 'Purity-related information, where recorded', 'Supplier or processing reference, where available'] },
-        { label: 'Natural gemstones', title: 'Gemstone information, where recorded', photo: '1590736969955-71cc94901144', alt: 'A gemstone set in a finely crafted jewellery piece', fields: ['Gemstone details', 'Available source information', 'Related material or batch reference', 'Documentation, where associated'] },
-        { label: 'Lab-grown diamonds', title: 'Recorded diamond details', photo: '1589363358753-4e6c6b9dbad9', alt: 'A brilliant gemstone detail in a jewellery setting', fields: ['Diamond details, where recorded', 'Material identifier', 'Available supplier or processing reference', 'Related product record'] }
+        { label: 'Precious metals', title: 'Metal details, where recorded', photo: '1617038220319-276d3cfab638', alt: 'Fine jewellery with a warm precious-metal finish', fields: ['Material type', 'Material identifier', 'Purity-related information, where recorded', 'Supplier or processing reference, where available'] },
+        { label: 'Natural gemstones', title: 'Gemstone information, where recorded', photo: '1599643478518-a784e5dc4c8f', alt: 'A gemstone set in a finely crafted jewellery piece', fields: ['Gemstone details', 'Available source information', 'Related material or batch reference', 'Documentation, where associated'] },
+        { label: 'Lab-grown diamonds', title: 'Recorded diamond details', photo: '1617038220319-276d3cfab638', alt: 'A brilliant gemstone detail in a jewellery setting', fields: ['Diamond details, where recorded', 'Material identifier', 'Available supplier or processing reference', 'Related product record'] }
     ];
     const categories = [
         { name: 'Gold jewellery', image: 'local-jewellery', alt: 'A gold ring and necklace arranged against ivory', caption: 'METAL & MAKER' },
-        { name: 'Diamond jewellery', image: '1590736969955-71cc94901144', alt: 'A diamond jewellery detail in soft directional light', caption: 'GEMSTONE DETAILS' },
-        { name: 'Gemstone jewellery', image: '1589363358753-4e6c6b9dbad9', alt: 'A coloured gemstone set in fine jewellery', caption: 'MATERIAL STORY' },
+        { name: 'Diamond jewellery', image: '1599643478518-a784e5dc4c8f', alt: 'A diamond jewellery detail in soft directional light', caption: 'GEMSTONE DETAILS' },
+        { name: 'Gemstone jewellery', image: '1617038220319-276d3cfab638', alt: 'A coloured gemstone set in fine jewellery', caption: 'MATERIAL STORY' },
         { name: 'Silver jewellery', image: '1610701596007-11502861dcfa', alt: 'A handcrafted silver-toned detail', caption: 'CRAFT & IDENTITY' },
         { name: 'Bridal jewellery', image: '1599643478518-a784e5dc4c8f', alt: 'A bridal jewellery composition with necklace and earrings', caption: 'MADE FOR AN OCCASION' },
         { name: 'Traditional Indian jewellery', image: '1605100804763-247f67b3557e', alt: 'Traditional-inspired jewellery with intricate detail', caption: 'HERITAGE & HANDWORK' },
@@ -51,8 +51,8 @@ function renderJewelleryPage(container) {
     ];
     const stakeholders = [
         ['workshop', 'Jewellery manufacturers', 'Connect products with available manufacturing records and relevant production identifiers.', '1558618666-fcd25c85cd64', 'A maker working carefully at a craft bench'],
-        ['gem', 'Material suppliers', 'Associate materials with identifying records and available source information.', '1590736969955-71cc94901144', 'Gemstone and metal details representing material supply'],
-        ['box', 'Jewellery retailers', 'Explore product records and present relevant information to customers.', '1604881988758-f76ad2f7aad9', 'A jewellery item prepared for retail presentation'],
+        ['gem', 'Material suppliers', 'Associate materials with identifying records and available source information.', '1599643478518-a784e5dc4c8f', 'Gemstone and metal details representing material supply'],
+        ['box', 'Jewellery retailers', 'Explore product records and present relevant information to customers.', '1603561591411-07134e71a2a9', 'A jewellery item prepared for retail presentation'],
         ['route', 'Wholesalers & distributors', 'Reference product and batch details and review recorded handovers where supported.', '1565514020179-026b92b84bb6', 'Carefully organized jewellery packaging'],
         ['search', 'Customers & collectors', 'Explore available product information and access supported verification features.', 'local-jewellery', 'A ring and necklace shown in warm natural light']
     ];
@@ -65,8 +65,8 @@ function renderJewelleryPage(container) {
     ];
     const productCategories = [
         { name: 'Gold jewellery', image: 'local-jewellery', details: ['Product name', 'Product identifier', 'Metal details, where recorded', 'Purity-related records, where available', 'Manufacturer and relevant product records'] },
-        { name: 'Diamond jewellery', image: '1590736969955-71cc94901144', details: ['Product name', 'Product identifier', 'Diamond details, where recorded', 'Certification references, where available', 'Manufacturer or retailer information'] },
-        { name: 'Gemstone jewellery', image: '1589363358753-4e6c6b9dbad9', details: ['Product name', 'Product identifier', 'Gemstone type, where recorded', 'Available material information', 'Related product records'] },
+        { name: 'Diamond jewellery', image: '1599643478518-a784e5dc4c8f', details: ['Product name', 'Product identifier', 'Diamond details, where recorded', 'Certification references, where available', 'Manufacturer or retailer information'] },
+        { name: 'Gemstone jewellery', image: '1617038220319-276d3cfab638', details: ['Product name', 'Product identifier', 'Gemstone type, where recorded', 'Available material information', 'Related product records'] },
         { name: 'Silver jewellery', image: '1610701596007-11502861dcfa', details: ['Product name', 'Product identifier', 'Metal details, where recorded', 'Manufacturer information', 'Available product records'] }
     ];
 
@@ -144,7 +144,7 @@ function renderJewelleryPage(container) {
             <section class="jwl-customer jwl-section" aria-labelledby="jwl-customer-title">
                 <div class="jwl-customer-heading"><p class="jwl-kicker">DISCOVER · VERIFY · UNDERSTAND</p><h2 id="jwl-customer-title">A More Informed Way<br><em>to Discover Fine Jewellery.</em></h2><p>Beyond design and craftsmanship, customers may want to explore a jewellery item's available material, identification, and product records.</p></div>
                 <div class="jwl-customer-steps">${[
-                    ['01', 'Discover', 'Explore the product and locate its available identifying information.', '1604881988758-f76ad2f7aad9', 'A customer-facing jewellery presentation'],
+                    ['01', 'Discover', 'Explore the product and locate its available identifying information.', '1603561591411-07134e71a2a9', 'A customer-facing jewellery presentation'],
                     ['02', 'Verify', 'Use the available verification workflow to access relevant product records.', '1511707171634-5f897ff02aa9', 'A smartphone as an entry point to product information'],
                     ['03', 'Understand', 'Review the information available about the jewellery piece and its recorded journey.', 'local-jewellery', 'Fine jewellery detail presented for closer inspection']
                 ].map(([num, title, copy, photo, alt]) => `<article><div class="jwl-customer-image"><img src="${jewelleryPhoto(photo, 900)}" alt="${alt}" width="900" height="650" loading="lazy"><span>${num}</span></div><h3>${title}</h3><p>${copy}</p></article>`).join('')}</div>
@@ -162,10 +162,18 @@ function renderJewelleryPage(container) {
                 <div class="jwl-category-grid">${categories.map((item, i) => `<figure class="jwl-category jwl-category--${i + 1}"><img src="${jewelleryPhoto(item.image, i < 3 ? 1000 : 700)}" alt="${item.alt}" width="${i < 3 ? 1000 : 700}" height="${i < 3 ? 850 : 620}" loading="lazy"><figcaption><small>${item.caption}</small><span>${item.name}<b aria-hidden="true">↗</b></span></figcaption></figure>`).join('')}</div>
             </section>
 
-            <section class="jwl-responsible jwl-section" aria-labelledby="jwl-responsible-title"><div class="jwl-responsible-visual"><img src="${jewelleryPhoto('1589363358753-4e6c6b9dbad9', 1100)}" alt="Precious gemstone details beside a finished jewellery setting" width="1100" height="900" loading="lazy"><span class="jwl-responsible-label">MATERIAL INFORMATION / PRODUCT RECORD</span></div><div class="jwl-responsible-copy"><p class="jwl-kicker">MATERIAL TRANSPARENCY</p><h2 id="jwl-responsible-title">Know What Is Recorded<br><em>About the Materials.</em></h2><p class="jwl-lede">Understanding material provenance requires relevant records and evidence. Traceability can help connect available material information with the products in which those materials are used.</p><div class="jwl-responsible-list">${[['01', 'Recorded origin', 'Explore source information where it has been recorded and made available.'], ['02', 'Material identification', 'Connect material identifiers with relevant product or batch records.'], ['03', 'Evidence-based transparency', 'Review available supporting records without assuming information that has not been verified.']].map(([num, title, copy]) => `<article><span>${num}</span><div><h3>${title}</h3><p>${copy}</p></div></article>`).join('')}</div></div></section>
+            <section class="jwl-responsible jwl-section" aria-labelledby="jwl-responsible-title"><div class="jwl-responsible-visual"><img src="${jewelleryPhoto('1617038220319-276d3cfab638', 1100)}" alt="Precious gemstone details beside a finished jewellery setting" width="1100" height="900" loading="lazy"><span class="jwl-responsible-label">MATERIAL INFORMATION / PRODUCT RECORD</span></div><div class="jwl-responsible-copy"><p class="jwl-kicker">MATERIAL TRANSPARENCY</p><h2 id="jwl-responsible-title">Know What Is Recorded<br><em>About the Materials.</em></h2><p class="jwl-lede">Understanding material provenance requires relevant records and evidence. Traceability can help connect available material information with the products in which those materials are used.</p><div class="jwl-responsible-list">${[['01', 'Recorded origin', 'Explore source information where it has been recorded and made available.'], ['02', 'Material identification', 'Connect material identifiers with relevant product or batch records.'], ['03', 'Evidence-based transparency', 'Review available supporting records without assuming information that has not been verified.']].map(([num, title, copy]) => `<article><span>${num}</span><div><h3>${title}</h3><p>${copy}</p></div></article>`).join('')}</div></div></section>
 
             <section class="jwl-final"><div class="jwl-final-copy"><p class="jwl-kicker">ORIGINX / JEWELLERY TRACEABILITY</p><h2>Beautifully Crafted.<br><em>Meaningfully Connected.</em></h2><p>Discover how OriginX can help connect jewellery products with available material, manufacturing, and supply-chain information.</p><div class="jwl-actions"><a class="jwl-button jwl-button--light" href="#jwl-journey" onclick="scrollToHash('jwl-journey'); return false;">Explore Jewellery Traceability <span aria-hidden="true">↘</span></a><button class="jwl-button jwl-button--outline" type="button" onclick="goToVerify()">Verify a Product <span aria-hidden="true">↗</span></button></div></div><div class="jwl-final-art"><img src="${jewelleryPhoto('local-jewellery')}" alt="Jewellery collection arranged in a refined editorial composition" width="1000" height="680" loading="lazy"><span>EVERY TREASURE HAS A STORY</span></div></section>
         </div>`;
+
+    container.addEventListener('error', event => {
+        const image = event.target;
+        if (!(image instanceof HTMLImageElement) || image.dataset.jwlFallback) return;
+        image.dataset.jwlFallback = 'true';
+        image.src = jewelleryPhoto('local-jewellery');
+        image.alt = 'Fine jewellery collection featuring a crafted gold ring, necklace, and gemstone details';
+    }, true);
 
     const stageButtons = [...container.querySelectorAll('[data-jwl-stage]')];
     const stagePanel = container.querySelector('#jwl-stage-panel');

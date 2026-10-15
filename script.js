@@ -855,7 +855,7 @@ function renderIndustryView(industryId) {
     }
 
     if (industryId === 'textiles') {
-        renderTextilesIndustryView(otherSectors, container);
+        renderTextileEditorialPage(container);
         return;
     }
 
