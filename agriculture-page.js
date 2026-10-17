@@ -207,6 +207,7 @@ function renderAgriculturePage(ind, otherSectors, container) {
             <section class="agri-v2-other-sectors"><div class="container"><p>Explore more of OriginX</p><div class="other-sectors-grid">${otherSectors.map(key => `<button type="button" class="other-sector-chip" onclick="goToIndustry('${key}')"><span class="ic" aria-hidden="true">${INDUSTRIES[key].icon}</span>${escapeHtml(INDUSTRIES[key].name)}</button>`).join('')}</div></div></section>
         </div>`;
 
+    initializeAgricultureMandiDirectory(container);
     initializeAgriTabs(container);
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
         const revealObserver = new IntersectionObserver(entries => {
